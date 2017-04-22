@@ -41,7 +41,6 @@ levels = {
 				x = 14,
 				y = 14,
 				sprite = 64,
-				talkedto = false,
 				script = {
 					"bob: i should probably go for a walk",
 					"bob: ...",
@@ -52,7 +51,6 @@ levels = {
 				x = 110/8,
 				y = 50/8,
 				sprite = 65,
-				talkedto = false,
 				script = {
 					"john: what the hell is wrong with her?",
 					"john: i should have stayed home"
@@ -79,7 +77,6 @@ levels = {
 				x = 11/8,
 				y = 53/8,
 				sprite = 66,
-				talkedto = false,
 				script = {
 					"dale: i wonder why he did it",
 					"dale: .... i bet his father put him up to it"
@@ -89,7 +86,6 @@ levels = {
 				x = 111/8,
 				y = 53/8,
 				sprite = 67,
-				talkedto = false,
 				script = {
 					"tommy jr: ninjaaaaaaaaaaaaaaaaaaaaaa!"
 				}
@@ -105,7 +101,7 @@ levels = {
 				script = {
 					"dog: woof!",
 					"dog: bark!"
-			}
+ 			}
 			}
 		}
 	},
@@ -115,7 +111,6 @@ levels = {
 				x = 16/8,
 				y = 16/8,
 				sprite = 81,
-				talkedto = false,
 				script = {
 					"joe: boy, it sure is hot today..",
 					"joe: anybody want ice cream?"
@@ -125,7 +120,6 @@ levels = {
 				x = 32/8,
 				y = 16/8,
 				sprite = 82,
-				talkedto = false,
 				script = {
 					"jill: i'm off to the forest to pick some flowers for granma..",
 					"jill: i hope she'll like them..",
@@ -137,7 +131,6 @@ levels = {
 				x = 16/8,
 				y = 48/8,
 				sprite = 83,
-				talkedto = false,
 				script = {
 					"grandma: jill thinks i'm dead..",
 					"grandma: stupid girl.."
@@ -147,7 +140,6 @@ levels = {
 				x = 16/8,
 				y = 64/8,
 				sprite = 84,
-				talkedto = false,
 				script = {
 					"grandpa: speak up, son! i can't hear a fucking word you're sayin'!!"
 				}
@@ -165,7 +157,7 @@ levels = {
 					"chicken: bwaark!",
 					"chicken: uaark!",
 					"chicken: donald trump!"
-			}
+ 			}
 			}
 		}
 	}
