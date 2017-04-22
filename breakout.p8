@@ -15,6 +15,8 @@ ball = {
 	dy = 1
 }
 
+
+
 function _update()
 	ball.x += ball.dx
 	ball.y += ball.dy
