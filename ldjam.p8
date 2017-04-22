@@ -41,10 +41,9 @@ levels = {
 				sprite = 64,
 				talkedto = false,
 				script = {
-					"you're not mr. spaceman'",
-					"i was looking for mr. spaceman",
+					"i should probably go for a walk",
 					"...",
-					"yes"
+					"not that it matters"
 				}
 			},
 			guy2 = {
@@ -53,8 +52,8 @@ levels = {
 				sprite = 65,
 				talkedto = false,
 				script = {
-					"the wheather? let's talk about that'",
-					"have you tried going the other direction?"
+					"what the hell is wrong with her?",
+					"i should have stayed home"
 				}
 			}
 		}
@@ -68,7 +67,8 @@ levels = {
 				sprite = 66,
 				talkedto = false,
 				script = {
-					"monkeeeeeeeeeeeey!"
+					"i wonder why he did it",
+					".... i bet his father put him up to it"
 				}
 			},
 			guy2 = {
@@ -77,7 +77,7 @@ levels = {
 				sprite = 67,
 				talkedto = false,
 				script = {
-					"ninjaaaa!"
+					"ninjaaaaaaaaaaaaaaaaaaaaaa!"
 				}
 			}
 		}
@@ -100,9 +100,9 @@ levels = {
 				sprite = 82,
 				talkedto = false,
 				script = {
-					"i'm off to the forrest to pick some flowers for granma..",
+					"i'm off to the forest to pick some flowers for granma..",
 					"i hope she'll like them..",
-					"poor granma..",
+					"poor grandma..",
 					"she died so young.."
 				}
 			},
@@ -225,7 +225,6 @@ function handlemoveplayeraccrossmap()
 		moved = true
 	end
 	if moved and allnpcstalkedto() then
-	sfx(1)
 		currentlevel += 1
 	end
 end
