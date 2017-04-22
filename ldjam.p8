@@ -83,7 +83,6 @@ function _init()
 	currentlevel = 1
 	sfx(1)
 end
-
 function _update()
 	if (player.state == 0) then
 		handleplayermovement()
