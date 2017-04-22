@@ -33,10 +33,10 @@ chars = {
 		y = 100,
 		sprite = 64,
 		script = {
-			"You're not Mr. Spaceman'",
-			"I was looking for Mr. Spaceman",
+			"you're not mr. spaceman'",
+			"i was looking for mr. spaceman",
 			"...",
-			"Yes"
+			"yes"
 		}
 	},
 	guy2 = {
@@ -44,8 +44,8 @@ chars = {
 		y = 120,
 		sprite = 65,
 		script = {
-			"Who is that?",
-			"Oh OK... Want me to help find him?",
+			"who is that?",
+			"oh ok... want me to help find him?",
 			".."
 		}
 	}
@@ -163,11 +163,34 @@ function handledialog()
 	end
 end
 
+function wordwrap(txt, w)
+	p = 0
+	word = ""
+	out = ""
+	for i = 1,#txt do
+		c = sub(txt, i, i)
+		p += 1
+		word = word..c
+		if (p > w) then
+			out = out .. "\n"
+			p = #word
+		end
+		if (c == " ") then
+			out = out .. word
+			word = ""
+		end
+	end
+	out = out .. word
+	return out
+end
+
 function drawdiabox()
 	camera(0,0)
 	rectfill(0, 95, 127, 127, 0)
 	rect(0, 96, 127, 127, 15)
-	print(dialog.script[dialog.pos], 2, 98)
+	txt = dialog.script[dialog.pos]
+	txt = wordwrap(txt, 30)
+	print(txt, 2, 98)
 end
 
 __gfx__
