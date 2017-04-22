@@ -38,8 +38,8 @@ levels = {
 	{
 		chars = {
 			guy1 = {
-				x = 100,
-				y = 100,
+				x = 14,
+				y = 14,
 				sprite = 64,
 				talkedto = false,
 				script = {
@@ -49,8 +49,8 @@ levels = {
 				}
 			},
 			guy2 = {
-				x = 110,
-				y = 50,
+				x = 110/8,
+				y = 50/8,
 				sprite = 65,
 				talkedto = false,
 				script = {
@@ -59,16 +59,16 @@ levels = {
 				}
 			},
 			animal = {
-				x = 46,
-				y = 64,
+				x = 46/8,
+				y = 64/8,
 				sprite = 136,
 				firstsprite = 136,
 				maxsprite = 140,
 				repititionnumber = 4,
-				talkedto = false,
+				talkedto = true,
 				script = {
 					"rabbit: ...!"
-			}
+				}
 			}
 		}
 	},
@@ -101,7 +101,7 @@ levels = {
 				firstsprite = 132,
 				maxsprite = 136,
 				repititionnumber = 4,
-				talkedto = false,
+				talkedto = true,
 				script = {
 					"dog: woof!",
 					"dog: bark!"
@@ -159,7 +159,7 @@ levels = {
 				firstsprite = 128,
 				maxsprite = 132,
 				repititionnumber = 4,
-				talkedto = false,
+				talkedto = true,
 				script = {
 					"chicken: cluck!",
 					"chicken: bwaark!",
@@ -191,7 +191,7 @@ function _draw()
 	camera(cam.x ,cam.y)
 	drawmap()
 	for name,char in pairs(levels[currentlevel].chars) do
-		spr(char.sprite, char.x-4, char.y-4)
+		spr(char.sprite, char.x*8-4, char.y*8-4)
 	end
 	spr(player.sprite,player.x-4,player.y-4,1,1,player.flipped)
 	if (player.state == 1) then
@@ -218,13 +218,13 @@ end
 function moverandomdirection(animal)
 	direction = flr(rnd(4))
 	if (direction < 1) then
-		animal.x += 5
+		animal.x += .2
 	elseif (direction < 2) then
-		animal.x -= 5
+		animal.x -= .2
 	elseif (direction < 3) then
-		animal.y -= 5
+		animal.y -= .2
 	else
-		animal.y += 5
+		animal.y += .2
 	end
 end
 
@@ -335,7 +335,7 @@ end
 function npcwithinrange()
 	inrange = false
 	for name,char in pairs(levels[currentlevel].chars) do
-		if (abs(char.x - player.x) < dialog.npcdialogdistance and abs(char.y - player.y) < dialog.npcdialogdistance) then
+		if (abs(char.x*8 - player.x) < dialog.npcdialogdistance and abs(char.y*8 - player.y) < dialog.npcdialogdistance) then
 			inrange = true
 			dialog.script = char.script
 			char.talkedto = true
