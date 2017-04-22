@@ -28,29 +28,59 @@ dialog = {
 	script = nil,
 	pos = 0,
 }
-chars = {
-	guy1 = {
-		x = 100,
-		y = 100,
-		sprite = 64,
-		script = {
-			"You're not Mr. Spaceman'",
-			"I was looking for Mr. Spaceman",
-			"..."
+
+currentlevel = 1
+
+--levels:
+levels = {
+	{
+		chars = {}
+	},
+
+	{
+		chars = {
+			guy1 = {
+				x = 100,
+				y = 100,
+				sprite = 64,
+				talkedTo = false,
+				script = {
+					"you're not mr. spaceman'",
+					"i was looking for mr. spaceman",
+					"...",
+					"yes"
+				}
+			},
+			guy2 = {
+				x = 110,
+				y = 50,
+				sprite = 65,
+				talkedTo = false,
+				script = {
+					"the wheather? Let's talk about that'",
+					"have you tried going the other direction?"
+				}
+			}
 		}
 	},
-	guy2 = {
-		x = 110,
-		y = 50,
-		sprite = 65,
-		script = {
-			"The wheather? Let's talk about that'",
-			"Have you tried going the other direction?"
+
+	{
+		chars = {
+			guy1 = {
+				x = 11,
+				y = 53,
+				sprite = 64,
+				talkedTo = false,
+				script = {
+					"monkeeeeeeeeeeeey!"
+				}
+			}
 		}
 	}
 }
 
 function _init()
+currentlevel = 1
 	sfx(1)
 end
 
@@ -67,10 +97,8 @@ function _draw()
 	camera(cam.x ,cam.y)
 	drawmap()
 	spr(player.sprite,player.x,player.y)
-	if (level == 1) then
-		for name,char in pairs(chars) do
-			spr(char.sprite, char.x, char.y)
-		end 
+	for name,char in pairs(levels[currentlevel].chars) do
+		spr(char.sprite, char.x, char.y)
 	end
 	if (player.state == 1) then
 		drawdiabox()
@@ -145,9 +173,8 @@ function handlemoveplayeraccrossmap()
 		player.y -= map.sizey * 8
 		moved = true
 	end
-	if level == 0 and moved then
-		level += 1
-		sfx(2)
+	if moved then
+		currentlevel += 1
 	end
 end
 
@@ -165,7 +192,7 @@ end
 
 function npcwithinrange()
 	inrange = false
-	for name,char in pairs(chars) do
+	for name,char in pairs(levels[currentlevel].chars) do
 		if (abs(char.x - player.x) < dialog.npcdialogdistance and abs(char.y - player.y) < dialog.npcdialogdistance) then
 			inrange = true
 			dialog.script = char.script
