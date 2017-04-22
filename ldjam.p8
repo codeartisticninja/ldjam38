@@ -24,6 +24,7 @@ player = {
 	sprite = 0
 }
 dialog = {
+	npcdialogdistance = 16,
 	script = nil,
 	pos = 0,
 }
@@ -35,18 +36,16 @@ chars = {
 		script = {
 			"You're not Mr. Spaceman'",
 			"I was looking for Mr. Spaceman",
-			"...",
-			"Yes"
+			"..."
 		}
 	},
 	guy2 = {
 		x = 110,
-		y = 120,
+		y = 50,
 		sprite = 65,
 		script = {
-			"Who is that?",
-			"Oh OK... Want me to help find him?",
-			".."
+			"The wheather? Let's talk about that'",
+			"Have you tried going the other direction?"
 		}
 	}
 }
@@ -68,9 +67,11 @@ function _draw()
 	camera(cam.x ,cam.y)
 	drawmap()
 	spr(player.sprite,player.x,player.y)
-	for name,char in pairs(chars) do
-		spr(char.sprite, char.x, char.y)
-	end 
+	if (level == 1) then
+		for name,char in pairs(chars) do
+			spr(char.sprite, char.x, char.y)
+		end 
+	end
 	if (player.state == 1) then
 		drawdiabox()
 	end
@@ -104,8 +105,7 @@ function handlecontrols()
 	if (btn(3)) then
 		player.dy = 1
 	end
-	if (btnp(4)) then
-		dialog.script = chars.guy2.script
+	if (btnp(4)and npcwithinrange()) then
 		dialog.pos = 1
 		player.state = 1
 	end
@@ -161,6 +161,17 @@ function handledialog()
 			player.state = 0
 		end
 	end
+end
+
+function npcwithinrange()
+	inrange = false
+	for name,char in pairs(chars) do
+		if (abs(char.x - player.x) < dialog.npcdialogdistance and abs(char.y - player.y) < dialog.npcdialogdistance) then
+			inrange = true
+			dialog.script = char.script
+		end
+	end 
+	return inrange
 end
 
 function drawdiabox()
