@@ -167,6 +167,7 @@ function _draw()
 			startsprite = rnd(2)
 			levels[currentlevel].chars.chicken.sprite = 128 + flr(startsprite)
 			levels[currentlevel].chars.chicken.pecknumber = -flr(-rnd(3))
+			moverandomdirection(levels[currentlevel].chars.chicken)
 		end
 	end
 	cls()
@@ -182,6 +183,19 @@ function _draw()
 	spr(player.sprite,player.x,player.y)
 	if (player.state == 1) then
 		drawdiabox()
+	end
+end
+
+function moverandomdirection(chicken)
+	direction = flr(rnd(3))
+	if (direction < 1) then
+		chicken.x += 5
+	elseif (direction < 2) then
+		chicken.x -= 5
+	elseif (direction < 3) then
+		chicken.y -= 5
+	else
+		chicken.y += 5
 	end
 end
 
