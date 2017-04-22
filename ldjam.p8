@@ -58,6 +58,12 @@ function handleplayermovement()
  	player.x -= player.dx
  	player.y -= player.dy
 	end
+	handlemoveplayeraccrossmap()
+	cam.x = player.x - 63
+	cam.y = player.y - 63
+end
+
+function handlemoveplayeraccrossmap()
 	if player.x < 0 then
 		player.x += map.sizex * 8
 	end
@@ -70,8 +76,6 @@ function handleplayermovement()
 	if player.y > map.sizey * 8 then
 		player.y -= map.sizey * 8
 	end
-	cam.x = player.x - 63
-	cam.y = player.y - 63
 end
 
 function handlecontrols()
