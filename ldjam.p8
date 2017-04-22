@@ -17,11 +17,11 @@ player = {
 	dx = 0,
 	dy = 0,
 	state = 0,
-	sprite = 70,
+	sprite = 76,
 	flipped = false
 }
 dialog = {
-	npcdialogdistance = 16,
+	npcdialogdistance = 8,
 	script = nil,
 	pos = 0,
 }
@@ -179,9 +179,9 @@ function _draw()
 	camera(cam.x ,cam.y)
 	drawmap()
 	for name,char in pairs(levels[currentlevel].chars) do
-		spr(char.sprite, char.x, char.y)
+		spr(char.sprite, char.x-4, char.y-4)
 	end
-	spr(player.sprite,player.x,player.y,1,1,player.flipped)
+	spr(player.sprite,player.x-4,player.y-4,1,1,player.flipped)
 	if (player.state == 1) then
 		drawdiabox()
 	end
