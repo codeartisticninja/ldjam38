@@ -107,7 +107,6 @@ function drawmap()
 	mapdraw(0, 0, map.sizex *  8, map.sizey *  8, map.sizex,map.sizey)
 end
 
-<<<<<<< HEAD
 function handlemoveplayeraccrossmap()
 	if player.x < 0 then
 		player.x += map.sizex * 8
@@ -122,7 +121,7 @@ function handlemoveplayeraccrossmap()
 		player.y -= map.sizey * 8
 	end
 end
-=======
+
 -- dialog system --
 
 function handledialog()
@@ -141,7 +140,7 @@ function drawdiabox()
 	rect(0, 96, 127, 127, 15)
 	print(dialog.script[dialog.pos], 2, 98)
 end
->>>>>>> c02c88533c720e870804806073c246bc8248322e
+
 __gfx__
 00000000449444444464445433b33333565655650000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 00000000444444944445446433333b33565655650000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
