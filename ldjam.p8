@@ -21,6 +21,12 @@ player = {
 	state = 0,
 	sprite = 0
 }
+
+state = {
+	movement = 0,
+	dialog = 1
+}
+
 dialog = {
 	script = nil,
 	pos = 0,
@@ -37,9 +43,9 @@ function _init()
 end
 
 function _update()
-	if (player.state == 0) then
+	if (player.state == state.movement) then
 		handleplayermovement()
-	elseif (player.state == 1) then
+	elseif (player.state == state.dialog) then
 		handledialog()
 	end
 end
@@ -50,7 +56,7 @@ function _draw()
 	drawmap()
 	spr(player.sprite,player.x,player.y)
 	print(flr(player.x / 8)..","..flr(player.y / 8))
-	if (player.state == 1) then
+	if (player.state == state.dialog) then
 		drawdiabox()
 	end
 end
@@ -86,7 +92,7 @@ function handlecontrols()
 	if (btnp(4)) then
 		dialog.script = dialog.guy1
 		dialog.pos = 1
-		player.state = 1
+		player.state = state.dialog
 	end
 end
 
@@ -129,7 +135,7 @@ function handledialog()
 		if (dialog.pos < count(dialog.script)) then
 			dialog.pos += 1
 		else
-			player.state = 0
+			player.state = state.movement
 		end
 	end
 end
