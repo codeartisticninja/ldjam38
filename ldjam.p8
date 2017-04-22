@@ -149,14 +149,14 @@ function _draw()
 	for name,char in pairs(levels[currentlevel].chars) do
 		spr(char.sprite, char.x, char.y)
 	end
-	if (player.state == 1) then
-		drawdiabox()
-	end
 	player.sprite += 1
 	if player.sprite > 79 then
 		player.sprite = 76
 	end
 	spr(player.sprite,player.x,player.y)
+	if (player.state == 1) then
+		drawdiabox()
+	end
 end
 
 function handleplayermovement()
