@@ -18,7 +18,14 @@ player = {
 	y = 64,
 	dx = 0,
 	dy = 0,
+	state = 0,
 	sprite = 0
+}
+dialog = {
+	"hi there!",
+	"how are you?",
+	"...",
+	"oh.. i'm sorry to hear that"
 }
 
 function _init()
@@ -26,7 +33,11 @@ function _init()
 end
 
 function _update()
-	handleplayermovement()
+	if (player.state == 0) then
+		handleplayermovement()
+	elseif (player.state == 1) then
+		handledialog()
+	end
 end
 
 function _draw()
@@ -35,6 +46,9 @@ function _draw()
 	drawmap()
 	spr(player.sprite,player.x,player.y)
 	print(flr(player.x / 8)..","..flr(player.y / 8))
+	if (player.state == 1) then
+		drawdiabox()
+	end
 end
 
 function handleplayermovement()
@@ -65,6 +79,9 @@ function handlecontrols()
 	if (btn(3)) then
 		player.dy = 1
 	end
+	if (btnp(4)) then
+		player.state = 1
+	end
 end
 
 function positioniscollideable()
@@ -84,6 +101,7 @@ function drawmap()
 	mapdraw(0, 0, map.sizex *  8, map.sizey *  8, map.sizex,map.sizey)
 end
 
+<<<<<<< HEAD
 function handlemoveplayeraccrossmap()
 	if player.x < 0 then
 		player.x += map.sizex * 8
@@ -98,6 +116,20 @@ function handlemoveplayeraccrossmap()
 		player.y -= map.sizey * 8
 	end
 end
+=======
+-- dialog system --
+
+function handledialog()
+	if (btnp(4)) then
+		player.state = 0
+	end
+end
+
+function drawdiabox()
+	camera(0,0)
+	rect(0, 96, 127, 127)
+end
+>>>>>>> c02c88533c720e870804806073c246bc8248322e
 __gfx__
 00000000449444444464445433b33333565655650000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 00000000444444944445446433333b33565655650000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
