@@ -136,7 +136,8 @@ levels = {
 				script = {
 					"cluck!",
 					"bwaark!",
-					"clooork?"
+					"uaark!",
+					"donald trump!"
 			}
 			}
 		}
@@ -144,7 +145,7 @@ levels = {
 }
 
 function _init()
- currentlevel = 4
+ currentlevel = 1
  music(0)
 end
 
@@ -158,7 +159,7 @@ end
 
 function _draw()
 	drawnumber += 1
-	if (drawnumber % 20 == 1) then
+	if (drawnumber % 20 == 1 and levels[currentlevel].chars.chicken != nil) then
 		levels[currentlevel].chars.chicken.sprite += 1
 		if (levels[currentlevel].chars.chicken.sprite > 131) then
 			levels[currentlevel].chars.chicken.pecknumber -= 1
@@ -184,7 +185,7 @@ function _draw()
 end
 
 function moverandomdirection(chicken)
-	direction = flr(rnd(3))
+	direction = flr(rnd(4))
 	if (direction < 1) then
 		chicken.x += 5
 	elseif (direction < 2) then
