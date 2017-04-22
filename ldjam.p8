@@ -69,10 +69,19 @@ levels = {
 			guy1 = {
 				x = 11,
 				y = 53,
-				sprite = 64,
+				sprite = 66,
 				talkedto = false,
 				script = {
 					"monkeeeeeeeeeeeey!"
+				}
+			},
+			guy2 = {
+				x = 111,
+				y = 53,
+				sprite = 66,
+				talkedto = false,
+				script = {
+					"NINJAAAA!"
 				}
 			}
 		}
@@ -80,9 +89,9 @@ levels = {
 }
 
 function _init()
-	currentlevel = 1
 	sfx(1)
 end
+
 function _update()
 	if (player.state == 0) then
 		handleplayermovement()
@@ -173,19 +182,9 @@ function handlemoveplayeraccrossmap()
 		player.y -= map.sizey * 8
 		moved = true
 	end
-	if moved and talkedtoallnpcs() then
+	if moved then
 		currentlevel += 1
 	end
-end
-
-function talkedtoallnpcs()
-	talkedtoall = true
-	for name,char in pairs(levels[currentlevel].chars) do
-		if not char.talkedTo then
-			talkedtoall = false
-		end
-	end
-	return talkedtoall
 end
 
 -- dialog system --
@@ -206,7 +205,6 @@ function npcwithinrange()
 		if (abs(char.x - player.x) < dialog.npcdialogdistance and abs(char.y - player.y) < dialog.npcdialogdistance) then
 			inrange = true
 			dialog.script = char.script
-			char.talkedTo = true
 		end
 	end 
 	return inrange
