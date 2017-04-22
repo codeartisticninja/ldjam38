@@ -10,14 +10,12 @@ player = {
 	sprite = 0
 }
 
-rock = {
-	x = 32,
-	y = 64,
-	sprite = 1
+wall = {
+	sprite = 4
 }
 
 function _init()
-	collideableobjects = {player, rock}
+	collideableobjects = {player, wall}
 end
 
 function _update()
@@ -26,6 +24,7 @@ end
 
 function _draw()
 	cls()
+	mapdraw(0, 0, 0, 0, 20,20)
 	spr(player.sprite,player.x,player.y)
 	camera(player.x -63 ,player.y - 63)
 end
