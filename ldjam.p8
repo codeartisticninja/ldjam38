@@ -2,18 +2,34 @@ pico-8 cartridge // http://www.pico-8.com
 version 8
 __lua__
 
-position = {
-	x = 64
-	y = 64
+player = {
+	x = 64,
+	y = 64,
+	spirte = 0
 }
 
 function _update()
-
+	handlemovement()
 end
 
 function _draw()
 	cls()
-	spr(0, 
+	spr(player.sprite,player.x,player.y)
+end
+
+function handlemovement()
+	if (btn(0)) then
+		player.x = player.x - 1
+	end
+	if (btn(1)) then
+		player.x = player.x + 1
+	end
+	if (btn(2)) then
+		player.y = player.y - 1
+	end
+	if (btn(3)) then
+		player.y = player.y + 1
+	end
 end
 __gfx__
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
