@@ -23,10 +23,14 @@ player = {
 }
 
 dialog = {
-	"hi there!",
-	"how are you?",
-	"...",
-	"oh.. i'm sorry to hear that"
+	script = nil,
+	pos = 0,
+	guy1 = {
+		"hi there!",
+		"how are you?",
+		"...",
+		"oh.. i'm sorry to hear that"
+	}
 }
 
 function _update()
@@ -92,6 +96,8 @@ function handlecontrols()
 		player.dy = 1
 	end
 	if (btnp(4)) then
+		dialog.script = dialog.guy1
+		dialog.pos = 1
 		player.state = 1
 	end
 end
@@ -117,13 +123,19 @@ end
 
 function handledialog()
 	if (btnp(4)) then
-		player.state = 0
+		if (dialog.pos < count(dialog.script)) then
+			dialog.pos += 1
+		else
+			player.state = 0
+		end
 	end
 end
 
 function drawdiabox()
 	camera(0,0)
-	rect(0, 96, 127, 127)
+	rectfill(0, 95, 127, 127, 0)
+	rect(0, 96, 127, 127, 15)
+	print(dialog.script[dialog.pos], 2, 98)
 end
 __gfx__
 00000000449444444464445433b33333565655650000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
