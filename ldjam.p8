@@ -26,6 +26,7 @@ dialog = {
 }
 
 currentlevel = 1
+drawnumber = 1
 
 --levels:
 levels = {
@@ -124,6 +125,18 @@ levels = {
 				script = {
 					"speak up, son! i can't hear a fucking word you're sayin'!!"
 				}
+			},
+			chicken = {
+				x = 46,
+				y = 64,
+				sprite = 128,
+				pecknumber = 4,
+				talkedto = false,
+				script = {
+					"cluck!",
+					"bwaark!",
+					"clooork?"
+			}
 			}
 		}
 	}
@@ -143,6 +156,19 @@ function _update()
 end
 
 function _draw()
+	drawnumber += 1
+	if (drawnumber % 20 == 1) then
+		levels[currentlevel].chars.chicken.sprite += 1
+		if (levels[currentlevel].chars.chicken.sprite > 131) then
+			levels[currentlevel].chars.chicken.pecknumber -= 1
+			levels[currentlevel].chars.chicken.sprite = 130
+		end
+		if (levels[currentlevel].chars.chicken.pecknumber < 1) then
+			startsprite = rnd(2)
+			levels[currentlevel].chars.chicken.sprite = 128 + flr(startsprite)
+			levels[currentlevel].chars.chicken.pecknumber = -flr(-rnd(3))
+		end
+	end
 	cls()
 	camera(cam.x ,cam.y)
 	drawmap()
@@ -187,7 +213,7 @@ function handlecontrols()
 	if (btn(3)) then
 		player.dy = 1
 	end
-	if (btnp(4)and npcwithinrange()) then
+	if (btnp(4) and npcwithinrange()) then
 		dialog.pos = 1
 		player.state = 1
 	end
