@@ -174,11 +174,34 @@ function npcwithinrange()
 	return inrange
 end
 
+function wordwrap(txt, w)
+	p = 0
+	word = ""
+	out = ""
+	for i = 1,#txt do
+		c = sub(txt, i, i)
+		p += 1
+		word = word..c
+		if (p > w) then
+			out = out .. "\n"
+			p = #word
+		end
+		if (c == " ") then
+			out = out .. word
+			word = ""
+		end
+	end
+	out = out .. word
+	return out
+end
+
 function drawdiabox()
 	camera(0,0)
 	rectfill(0, 95, 127, 127, 0)
 	rect(0, 96, 127, 127, 15)
-	print(dialog.script[dialog.pos], 2, 98)
+	txt = dialog.script[dialog.pos]
+	txt = wordwrap(txt, 30)
+	print(txt, 2, 98)
 end
 
 __gfx__
