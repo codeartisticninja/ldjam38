@@ -80,7 +80,7 @@ levels = {
 }
 
 function _init()
-currentlevel = 1
+	currentlevel = 1
 	sfx(1)
 end
 
@@ -157,6 +157,7 @@ function drawmap()
 end
 
 function handlemoveplayeraccrossmap()
+	moved = false
 	if player.x < 0 then
 		player.x += map.sizex * 8
 		moved = true
@@ -173,9 +174,19 @@ function handlemoveplayeraccrossmap()
 		player.y -= map.sizey * 8
 		moved = true
 	end
-	if moved then
+	if moved and talkedtoallnpcs() then
 		currentlevel += 1
 	end
+end
+
+function talkedtoallnpcs()
+	talkedtoall = true
+	for name,char in pairs(levels[currentlevel].chars) do
+		if not char.talkedTo then
+			talkedtoall = false
+		end
+	end
+	return talkedtoall
 end
 
 -- dialog system --
@@ -196,6 +207,7 @@ function npcwithinrange()
 		if (abs(char.x - player.x) < dialog.npcdialogdistance and abs(char.y - player.y) < dialog.npcdialogdistance) then
 			inrange = true
 			dialog.script = char.script
+			char.talkedTo = true
 		end
 	end 
 	return inrange
