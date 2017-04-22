@@ -21,20 +21,29 @@ player = {
 	state = 0,
 	sprite = 0
 }
-
-state = {
-	movement = 0,
-	dialog = 1
-}
-
 dialog = {
 	script = nil,
 	pos = 0,
+}
+chars = {
 	guy1 = {
-		"hi there!",
-		"how are you?",
-		"...",
-		"oh.. i'm sorry to hear that"
+		x = 100,
+		y = 100,
+		script = {
+			"hi there!",
+			"how are you?",
+			"...",
+			"oh.. i'm sorry to hear that"
+		}
+	},
+	guy2 = {
+		x = 120,
+		y = 120,
+		script = {
+			"oh.. hello..",
+			"i didn't expect to see you..",
+			"so.. bye.."
+		}
 	}
 }
 
@@ -43,9 +52,9 @@ function _init()
 end
 
 function _update()
-	if (player.state == state.movement) then
+	if (player.state == 0) then
 		handleplayermovement()
-	elseif (player.state == state.dialog) then
+	elseif (player.state == 1) then
 		handledialog()
 	end
 end
@@ -56,7 +65,7 @@ function _draw()
 	drawmap()
 	spr(player.sprite,player.x,player.y)
 	print(flr(player.x / 8)..","..flr(player.y / 8))
-	if (player.state == state.dialog) then
+	if (player.state == 1) then
 		drawdiabox()
 	end
 end
@@ -90,9 +99,9 @@ function handlecontrols()
 		player.dy = 1
 	end
 	if (btnp(4)) then
-		dialog.script = dialog.guy1
+		dialog.script = chars.guy2.script
 		dialog.pos = 1
-		player.state = state.dialog
+		player.state = 1
 	end
 end
 
@@ -135,7 +144,7 @@ function handledialog()
 		if (dialog.pos < count(dialog.script)) then
 			dialog.pos += 1
 		else
-			player.state = state.movement
+			player.state = 0
 		end
 	end
 end
