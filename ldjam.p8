@@ -32,19 +32,19 @@ chars = {
 		x = 100,
 		y = 100,
 		script = {
-			"hi there!",
-			"how are you?",
+			"You're not Mr. Spaceman'",
+			"I was looking for Mr. Spaceman",
 			"...",
-			"oh.. i'm sorry to hear that"
+			"Yes"
 		}
 	},
 	guy2 = {
 		x = 120,
 		y = 120,
 		script = {
-			"oh.. hello..",
-			"i didn't expect to see you..",
-			"so.. bye.."
+			"Who is that?",
+			"Oh OK... Want me to help find him?",
+			".."
 		}
 	}
 }
