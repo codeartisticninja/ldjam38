@@ -66,7 +66,7 @@ levels = {
 			tim = {
 				x = 9,
 				y = 6,
-				sprite = 66,
+				sprite = 68,
 				script = {
 					"tim: they say that after you die you're rooted to a place'",
 					"tim: like a floating leaf caught in a spiders web"
