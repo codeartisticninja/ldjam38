@@ -31,10 +31,12 @@ drawnumber = 1
 
 levels = {
 	{
+		help = "use arrows to move",
 		chars = {}
 	},
 
 	{
+		help = "press z to read minds",
 		chars = {
 			richard = {
 				x = 14.5,
@@ -334,8 +336,12 @@ function _draw()
 	handleanimal()
 	cls()
 	drawmap()
+	if levels[currentlevel].help then
+		camera(0,0)
+		rectfill(0,0,128,6,0)
+		print(levels[currentlevel].help, 0, 0, 7)
+	end
 	camera(cam.x ,cam.y)
-	spr(player.sprite,player.x-4,player.y-4,1,1,player.flipped)
 	if (player.state == 1) then
 		drawdiabox()
 	end
@@ -413,6 +419,7 @@ function drawmap()
 		for x=-8,8,8 do
 			camera(map.sizex*x + cam.x, map.sizey*y + cam.y)
 			mapdraw(0, 0, 0, 0, map.sizex,map.sizey)
+			spr(player.sprite,player.x-4,player.y-4,1,1,player.flipped)
 			for name,char in pairs(levels[currentlevel].chars) do
 				spr(char.sprite,char.x*8-4,char.y*8-4,1,1,char.flipped)
 			end
