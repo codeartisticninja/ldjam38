@@ -346,7 +346,7 @@ levels = {
     script = {
      "sharon: i miss fluffy so much...  i wish peter was here",
      "sharon: he's the only one who can cheer me up, and motivate me",
-     "sharon: i'm ugly and i can't draw"
+     "sharon: i'm ugly"
     }
    },
    john = {
@@ -600,7 +600,7 @@ levels = {
 	},
 
 	{
-		help = "a year later",
+		help = "after peters funeral",
 		chars = {
    grave = {
      x = 24.5,
@@ -628,7 +628,7 @@ levels = {
     y = 53/8,
     sprite = 67,
     script = {
-     "dave: i've gotten more work done in a year than i have all my life!",
+     "dave: i've gotten more work done in the last couple of days, than i have in forever!",
      "dave: ..not always great work, but.. the customers seems happy.. ",
      "dave: and, boy, do i feel better about myself",
      "dave: peter.. wherever you are.. i owe you one.."
@@ -640,7 +640,7 @@ levels = {
     sprite = 68,
     script = {
      "tim: dear peter.. am i still crazy for talking to a dead guy..?",
-     "tim: i swear i haven't touched the stuff for several months now!",
+     "tim: i swear i haven't touched the stuff for several days now!",
      "tim: the others may not admit it, but.. i think you are the best martyr the village has ever had..",
      "tim: ...",
      "tim: hope you don't mind if i cut off your foot.."
@@ -677,7 +677,7 @@ levels = {
 				sprite = 64,
 				script = {
 					"richard is tending to peter's grave",
-					"richard: this is the day you died",
+					"richard: your funeral was great",
 					"richard: ...",
 					"richard: if you're listening, i still have those thoughts peter",
 					"richard: ... but you'll be happy to know that i haven't acted on them",
