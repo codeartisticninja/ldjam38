@@ -106,6 +106,28 @@ levels = {
 					"dave: maybe a new pew for the church? hmm. it has to match the others..."
 				}
 			},
+			richard = {
+				x = 7.5,
+				y = 19.5,
+				sprite = 64,
+				script = {
+					"richard: maybe she isn't home?'",
+					"richard: i can always say i was just here to spread the word of god",
+					"richard: sharon has such nice feet, i want to worship them",
+					"richard: ...",
+					"richard: i swear by the bible, this is the last time i do this!"
+				}
+			},
+			tim = {
+				x = 28,
+				y = 4,
+				sprite = 66,
+				script = {
+					"tim: maybe if i eat it here",
+					"tim: maybe noone will see me",
+					"tim: why was i out again?"
+				}
+			},
 			animal = {
 				x = 116/8,
 				y = 30/8,
@@ -123,41 +145,46 @@ levels = {
 	},
 	{
 		chars = {
-			joe = {
-				x = 16/8,
-				y = 16/8,
-				sprite = 81,
-				script = {
-					"joe: boy, it sure is hot today..",
-					"joe: anybody want ice cream?"
-				}
-			},
-			jill = {
-				x = 32/8,
-				y = 16/8,
+			sharon = {
+				x = 18,
+				y = 6,
 				sprite = 82,
 				script = {
-					"jill: i'm off to the forest to pick some flowers for granma..",
-					"jill: i hope she'll like them..",
-					"jill: poor grandma..",
-					"jill: she died so young.."
+					"sharon: richard is so disgusting... ugh",
+					"sharon: he's so nice to me though"
+				}
+			}
+			john = {
+				x = 15,
+				y = 6,
+				sprite = 66,
+				script = {
+					"john: sharon is so pretty",
+					"john: if i was some other kind of guy, i would romance her",
+					"john: ...",
+					"john: not that i give a shit"
 				}
 			},
-			granma = {
-				x = 16/8,
-				y = 48/8,
-				sprite = 83,
+			dave = {
+				x = 13,
+				y = 17,
+				sprite = 67,
 				script = {
-					"grandma: jill thinks i'm dead..",
-					"grandma: stupid girl.."
+					"dave: maybe preacher richard is finally going to tell me about that woodworking project",
+					"dave: i can't do a proper job with all that secrecy",
+					"dave: i need to get my tools ready, dammit! what's so important?"
 				}
 			},
-			granpa = {
-				x = 16/8,
-				y = 64/8,
-				sprite = 84,
+			richard = {
+				x = 25,
+				y = 12,
+				sprite = 64,
 				script = {
-					"grandpa: speak up, son! i can't hear a fucking word you're sayin'!!"
+					"richard: i can't say that i miss peter, but i have to be graceous",
+					"richard: ... in the name of the lord.... of course",
+					"richard: forgive my sins",
+					"richard: ...",
+					"richard: i think this will be a good spot for peter, by the stone"
 				}
 			},
 			animal = {
