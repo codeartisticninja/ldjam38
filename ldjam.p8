@@ -19,7 +19,8 @@ player = {
 	state = 0,
 	sprite = 76,
 	flipped = false,
-	hover = 0
+	hover = 0,
+	shake = 0
 }
 dialog = {
 	npcdialogdistance = 8,
@@ -315,7 +316,6 @@ levels = {
 }
 
 function _init()
- currentlevel = 1
  music(0)
 end
 
@@ -340,22 +340,28 @@ function _update()
 		handleplayermovement()
 	elseif (player.state == 1) then
 		handledialog()
+	elseif (player.state == 6) then
+		handleascend()
 	end
 end
 
 function _draw()
 	drawnumber += 1
-	handleanimal()
-	cls()
-	drawmap()
-	if levels[currentlevel].help then
-		camera(0,0)
-		rectfill(0,0,128,6,0)
-		print(centertxt(levels[currentlevel].help, 32), 0, 0, 7)
-	end
-	camera(cam.x ,cam.y)
-	if (player.state == 1) then
-		drawdiabox()
+	if player.state == 7 then
+		drawcredits()
+	else
+		handleanimal()
+		cls()
+		drawmap()
+		if levels[currentlevel].help then
+			camera(0,0)
+			rectfill(0,0,128,6,0)
+			print(centertxt(levels[currentlevel].help, 32), 0, 0, 7)
+		end
+		camera(cam.x ,cam.y)
+		if (player.state == 1) then
+			drawdiabox()
+		end
 	end
 end
 
@@ -437,7 +443,7 @@ function drawmap()
 		for x=-8,8,8 do
 			camera(map.sizex*x + cam.x, map.sizey*y + cam.y)
 			mapdraw(0, 0, 0, 0, map.sizex,map.sizey)
-			spr(player.sprite,player.x-4,player.y + player.hover-4,1,1,player.flipped)
+			spr(player.sprite,player.x + player.shake-4,player.y + player.hover-4,1,1,player.flipped)
 			for name,char in pairs(levels[currentlevel].chars) do
 				spr(char.sprite,char.x*8-4,char.y*8-4,1,1,char.flipped)
 			end
@@ -465,6 +471,10 @@ function handlemoveplayeraccrossmap()
 	end
 	if moved and allnpcstalkedto() then
 		currentlevel += 1
+		if not levels[currentlevel] then
+			player.state = 6
+			currentlevel -= 1
+		end
 	end
 end
 
@@ -557,6 +567,42 @@ function drawdiabox()
 	txt = sub(txt,1,dialog.col)
  print(txt, 0, 98, 7)
 	print(firstword(txt), 0, 98, 6)
+end
+
+-- ascend to the heavens! --
+
+function handleascend()
+	player.hover -= .5
+	if (drawnumber % 60 == 0) or (drawnumber % 30 == 7) then
+		player.shake += 1
+	elseif (drawnumber % 60 == 30) or (drawnumber % 30 == 22) then
+		player.shake -= 1
+	end
+	if player.hover < -80 then
+		player.state += 1
+	end
+end
+
+-- credits --
+
+function drawcredits()
+	color(7)
+	camera(0,0)
+	cls()
+	print("")
+	print("")
+	print("")
+	print("")
+	print(centertxt("the end!",32))
+	print("")
+	print("")
+	print(centertxt("made by",32))
+	print(centertxt("codeartistic.ninja",32))
+	print(centertxt("and",32))
+	print(centertxt("fennesz",32))
+	print("")
+	print("")
+	print(centertxt("thank you for playing!",32))
 end
 
 __gfx__
