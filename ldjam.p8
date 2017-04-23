@@ -24,6 +24,7 @@ dialog = {
 	npcdialogdistance = 8,
 	script = nil,
 	pos = 0,
+	col = 0
 }
 
 currentlevel = 1
@@ -466,11 +467,16 @@ end
 -- dialog system --
 
 function handledialog()
+	if dialog.col < 4096 then
+		dialog.col += 2
+	end
 	if (btnp(4)) then
 		if (dialog.pos < count(dialog.script)) then
 			dialog.pos += 1
+			dialog.col = 0
 		else
 			player.state = 0
+			dialog.col = 0
 		end
 	end
 end
@@ -534,6 +540,7 @@ function drawdiabox()
 	rect(0, 96, 127, 127, 5)
 	txt = dialog.script[dialog.pos]
 	txt = wordwrap(txt, 30)
+	txt = sub(txt,1,dialog.col)
  print(txt, 2, 98, 7)
 	print(firstword(txt), 2, 98, 6)
 end
