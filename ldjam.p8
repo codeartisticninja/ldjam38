@@ -686,6 +686,21 @@ levels = {
 			},
 		}
 	},
+ {
+  help = "hold z to let go",
+  chars = {
+   grave = {
+     x = 24.5,
+     y = 11.5,
+     sprite = 119,
+     talkedto = true,
+     dead = true,
+     script = {
+      "\"here lies peter\""
+    }
+   },
+  }
+ }
 	
 }
 
@@ -851,9 +866,10 @@ function handlemoveplayeraccrossmap()
 	end
 	if moved and allnpcstalkedto() then
 		currentlevel += 1
-		if not levels[currentlevel] then
+		if currentlevel > 10 then
+   music(-1)
 			player.state = 6
-			currentlevel -= 1
+   currentlevel = 11
 		end
 	end
 end
@@ -952,7 +968,10 @@ end
 -- ascend to the heavens! --
 
 function handleascend()
-	player.hover -= .5
+ handleplayermovement()
+ if (btn(4)) then
+  player.hover -= .5
+ end
 	if (drawnumber % 60 == 0) or (drawnumber % 30 == 7) then
 		player.shake += 1
 	elseif (drawnumber % 60 == 30) or (drawnumber % 30 == 22) then
