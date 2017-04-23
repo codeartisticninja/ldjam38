@@ -121,7 +121,7 @@ levels = {
 			tim = {
 				x = 28,
 				y = 4,
-				sprite = 66,
+				sprite = 68,
 				script = {
 					"tim: maybe if i eat it here",
 					"tim: maybe noone will see me",
@@ -153,7 +153,7 @@ levels = {
 					"sharon: richard is so disgusting... ugh",
 					"sharon: he's so nice to me though"
 				}
-			}
+			},
 			john = {
 				x = 15,
 				y = 6,
