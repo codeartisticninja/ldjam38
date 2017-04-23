@@ -395,13 +395,26 @@ function wordwrap(txt, w)
 	return out
 end
 
+function firstword(txt)
+ word = ""
+ for i = 1,#txt do
+  c = sub(txt, i, i)
+  if (c == " ") then
+   return word
+  end
+  word = word..c
+ end
+ return word
+end
+
 function drawdiabox()
 	camera(0,0)
 	rectfill(0, 95, 127, 127, 0)
-	rect(0, 96, 127, 127, 15)
+	rect(0, 96, 127, 127, 5)
 	txt = dialog.script[dialog.pos]
 	txt = wordwrap(txt, 30)
-	print(txt, 2, 98)
+ print(txt, 2, 98, 7)
+	print(firstword(txt), 2, 98, 6)
 end
 
 __gfx__
