@@ -537,12 +537,12 @@ end
 function drawdiabox()
 	camera(0,0)
 	rectfill(0, 95, 127, 127, 0)
-	rect(0, 96, 127, 127, 5)
+	-- rect(0, 96, 127, 127, 5)
 	txt = dialog.script[dialog.pos]
-	txt = wordwrap(txt, 30)
+	txt = wordwrap(txt, 32)
 	txt = sub(txt,1,dialog.col)
- print(txt, 2, 98, 7)
-	print(firstword(txt), 2, 98, 6)
+ print(txt, 0, 98, 7)
+	print(firstword(txt), 0, 98, 6)
 end
 
 __gfx__
