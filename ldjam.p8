@@ -550,7 +550,7 @@ levels = {
 				y = 20,
 				sprite = 65,
 				script = {
-					"paul: peter used to say that all i was in control of, was my own actions",
+					"paul: peter used to say that, all i was in control of, was my own actions",
 					"paul: ... he told me to beleive in myself",
 					"paul: what is belief? and who am i? a sicko who cuts off the limbs of dead pets",
 					"paul: dear beloved pets... and for what?"
@@ -600,20 +600,87 @@ levels = {
 	},
 
 	{
-		help = "morning, a year later",
+		help = "a year later",
 		chars = {
+   grave = {
+     x = 24.5,
+     y = 11.5,
+     sprite = 119,
+     talkedto = true,
+     dead = true,
+     script = {
+      "\"here lies peter\""
+    }
+   },
+   john = {
+    x = 11/8,
+    y = 53/8,
+    sprite = 66,
+    script = {
+     "john: man.. that guy, peter.. i guess he wasn't such an oddball after all..",
+     "john: i mean, if it wasn't for him, i never would have told sharon how i feel about her..",
+     "john: and now we're getting married! who would have thought she was a sucker for emotional guys..",
+     "john: heh.. thanks, peter.. you idiot.."
+    }
+   },
+   dave = {
+    x = 111/8,
+    y = 53/8,
+    sprite = 67,
+    script = {
+     "dave: i've gotten more work done in a year than i have all my life!",
+     "dave: ..not always great work, but.. the customers seems happy.. ",
+     "dave: and, boy, do i feel better about myself",
+     "dave: peter.. wherever you are.. i owe you one.."
+    }
+   },
+   tim = {
+    x = 28,
+    y = 4,
+    sprite = 68,
+    script = {
+     "tim: dear peter.. am i still crazy for talking to a dead guy..?",
+     "tim: i swear i haven't touched the stuff for several months now!",
+     "tim: the others may not admit it, but.. i think you are the best martyr the village has ever had..",
+     "tim: ...",
+     "tim: hope you don't mind if i cut off your foot.."
+    }
+   },
+   
+   paul = {
+    x =7,
+    y = 20,
+    sprite = 65,
+    script = {
+     "paul: i am in control of my own life.. me and no one else..!",
+     "paul: not the stars or a rabbit's foot or any of that nonsense..",
+     "paul: besides.. i gave fluffy's foot to sharon as something to remember him by..",
+     "paul: thanks for believing in me, peter.. when i couldn't do so myself.."
+    }
+   },
+   
+   sharon = {
+    x = 18,
+    y = 6,
+    sprite = 82,
+    script = {
+     "sharon: i am beautiful.. i know that now..",
+     "sharon: not just because johnny tells me every day.. but because peter taught me how to love myself..",
+     "sharon: i never thought my johnny could be such a sweetheart.. once you get to know him..",
+     "sharon: ...",
+     "sharon: peter was such a sweet guy.. i'm surprised he was still single when he died.."
+    }
+   },
 			richard = {
 				x = 23.5,
 				y = 12.5,
 				sprite = 64,
 				script = {
-					"richard: *is tending to peter's grave*",
+					"richard is tending to peter's grave",
 					"richard: this is the day you died",
-					"richard: *waters the last plant, the grave is well-kept*",
+					"richard: ...",
 					"richard: if you're listening, i still have those thoughts peter",
-					"richard: *smiles*",
 					"richard: ... but you'll be happy to know that i haven't acted on them",
-					"richard: *contemplates for a moment*",
 					"richard: i guess you did help me after all, huh?",
 				}
 			},
@@ -623,7 +690,7 @@ levels = {
 }
 
 function _init()
- currentlevel = 10
+ currentlevel = 1
  music(0)
 end
 
@@ -747,10 +814,15 @@ function handlecontrols()
 end
 
 function drawmap()
+ for y=-8,8,8 do
+  for x=-8,8,8 do
+   camera(map.sizex*x + cam.x, map.sizey*y + cam.y)
+   mapdraw(0, 0, 0, 0, map.sizex,map.sizey)
+  end
+ end
 	for y=-8,8,8 do
 		for x=-8,8,8 do
 			camera(map.sizex*x + cam.x, map.sizey*y + cam.y)
-			mapdraw(0, 0, 0, 0, map.sizex,map.sizey)
 			spr(player.sprite,player.x + player.shake-4,player.y + player.hover-4,1,1,player.flipped)
 			for name,char in pairs(levels[currentlevel].chars) do
 				spr(char.sprite,char.x*8-4,char.y*8-4,1,1,char.flipped)
