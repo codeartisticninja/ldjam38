@@ -186,6 +186,13 @@ end
 
 function _update()
 	if (player.state == 0) then
+		for name,char in pairs(levels[currentlevel].chars) do
+			if (drawnumber % 30 == 1) then
+				if (rnd(5) < 2) then
+					char.flipped = not char.flipped
+				end
+			end
+		end
 		handleplayermovement()
 	elseif (player.state == 1) then
 		handledialog()
@@ -196,16 +203,8 @@ function _draw()
 	drawnumber += 1
 	handleanimal()
 	cls()
-	camera(cam.x ,cam.y)
 	drawmap()
-	for name,char in pairs(levels[currentlevel].chars) do
-		spr(char.sprite,char.x*8-4,char.y*8-4,1,1,char.flipped)
-		if (drawnumber % 30 == 1) then
-			if (rnd(5) < 2) then
-				char.flipped = not char.flipped
-			end
-		end
-	end
+	camera(cam.x ,cam.y)
 	spr(player.sprite,player.x-4,player.y-4,1,1,player.flipped)
 	if (player.state == 1) then
 		drawdiabox()
@@ -280,15 +279,15 @@ function handlecontrols()
 end
 
 function drawmap()
-	mapdraw(0, 0, map.sizex * -8, map.sizey * -8, map.sizex,map.sizey)
-	mapdraw(0, 0, map.sizex * -8, map.sizey *  0, map.sizex,map.sizey)
-	mapdraw(0, 0, map.sizex * -8, map.sizey *  8, map.sizex,map.sizey)
-	mapdraw(0, 0, map.sizex *  0, map.sizey * -8, map.sizex,map.sizey)
-	mapdraw(0, 0, map.sizex *  0, map.sizey *  0, map.sizex,map.sizey)
-	mapdraw(0, 0, map.sizex *  0, map.sizey *  8, map.sizex,map.sizey)
-	mapdraw(0, 0, map.sizex *  8, map.sizey * -8, map.sizex,map.sizey)
-	mapdraw(0, 0, map.sizex *  8, map.sizey *  0, map.sizex,map.sizey)
-	mapdraw(0, 0, map.sizex *  8, map.sizey *  8, map.sizex,map.sizey)
+	for y=-8,8,8 do
+		for x=-8,8,8 do
+			camera(map.sizex*x + cam.x, map.sizey*y + cam.y)
+			mapdraw(0, 0, 0, 0, map.sizex,map.sizey)
+			for name,char in pairs(levels[currentlevel].chars) do
+				spr(char.sprite,char.x*8-4,char.y*8-4,1,1,char.flipped)
+			end
+		end
+	end
 end
 
 function handlemoveplayeraccrossmap()
