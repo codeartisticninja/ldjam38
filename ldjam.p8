@@ -895,7 +895,11 @@ function handledialog()
 			dialog.pos += 1
 			dialog.col = 0
 		else
-			player.state = 0
+   if currentlevel > 10 then
+    player.state = 6
+   else
+ 			player.state = 0
+   end
 			dialog.col = 0
 		end
 	end
