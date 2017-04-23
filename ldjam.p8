@@ -303,6 +303,7 @@ levels = {
 				y = 14,
 				sprite = 92,
 				talkedto = false,
+				dead = true,
 				script = {
 					"fluffy the rabbit is dead, but the cause of death is uncertain"
  				}
@@ -312,7 +313,7 @@ levels = {
 }
 
 function _init()
- currentlevel = 1
+ currentlevel = 5
  music(0)
 end
 
@@ -321,7 +322,9 @@ function _update()
 		for name,char in pairs(levels[currentlevel].chars) do
 			if (drawnumber % 30 == 1) then
 				if (rnd(5) < 2) then
-					char.flipped = not char.flipped
+					if not char.dead then
+						char.flipped = not char.flipped
+					end
 				end
 			end
 		end
