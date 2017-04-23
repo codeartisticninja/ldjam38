@@ -344,7 +344,7 @@ levels = {
 				y = 12,
 				sprite = 82,
 				script = {
-					"sharon: i miss fluffy so much...  miss peter was here",
+					"sharon: i miss fluffy so much...  i wish peter was here",
 					"sharon: he's the only one who can cheer me up, and motivate me",
 					"sharon: i'm ugly and i can't draw"
 				}
