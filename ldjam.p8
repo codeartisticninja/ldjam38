@@ -39,7 +39,7 @@ levels = {
 	},
 
 	{
-		help = "press z to read minds",
+		help = "press z to listen",
 		chars = {
 			richard = {
 				x = 14.5,
@@ -337,100 +337,166 @@ levels = {
 			},
 		}
 	},
+ {
+  chars = {
+   sharon = {
+    x = 4.5,
+    y = 12,
+    sprite = 82,
+    script = {
+     "sharon: i miss fluffy so much...  i wish peter was here",
+     "sharon: he's the only one who can cheer me up, and motivate me",
+     "sharon: i'm ugly and i can't draw"
+    }
+   },
+   john = {
+    x = 18,
+    y = 1,
+    sprite = 66,
+    script = {
+     "john: if peter was here right now",
+     "john: i'd kick his ass once for being here",
+     "john: twice for insinuating that i'm too sensitive",
+     "john: heh... the boys would get a kick out of that"
+    }
+   },
+   dave = {
+    x = 24,
+    y = 6,
+    sprite = 67,
+    script = {
+     "dave: *sigh*.. the coffin will never be good enough",
+     "dave: not even for fluffy..",
+     "dave: i suck at this. i'm a one-armed freak"
+    }
+   },
+   richard = {
+    x = 20,
+    y = 14,
+    sprite = 64,
+    script = {
+     "richard: peter.... the apostle? no.... peter...",
+     "richard: he has been in my thoughts a lot lately",
+     "richard: i can still feel his presence in my church sometimes"
+    }
+   },
+   tim = {
+    x = 15,
+    y = 23,
+    sprite = 68,
+    script = {
+     "tim: you never know what you've lost until it's gone",
+     "tim: ...",
+     "tim: what a cliche this is"
+    }
+   },
+
+   paul = {
+    x =11,
+    y = 12,
+    sprite = 65,
+    script = {
+     "paul: sharon is going to find out about the rabbit, she is going to find out",
+     "paul: oh no! i just know it! she'll see that the grave was disturbed..."
+    }
+   },
+
+   animal = {
+    x = 8,
+    y = 16,
+    sprite = 96,
+    firstsprite = 96,
+    maxsprite = 100,
+    repititionnumber = 4,
+    talkedto = true,
+    script = {
+     "chicken: cluck!"
+    }
+   },
+
+   animal = {
+    x = 8,
+    y = 8,
+    sprite = 100,
+    firstsprite = 100,
+    maxsprite = 104,
+    repititionnumber = 4,
+    talkedto = true,
+    script = {
+     "dog: woof!"
+    }
+   }
+  }
+ },
 	{
 		chars = {
-			sharon = {
-				x = 4.5,
-				y = 12,
-				sprite = 82,
-				script = {
-					"sharon: i miss fluffy so much...  i wish peter was here",
-					"sharon: he's the only one who can cheer me up, and motivate me",
-					"sharon: i'm ugly and i can't draw"
-				}
-			},
-			john = {
-				x = 18,
-				y = 1,
-				sprite = 66,
-				script = {
-					"john: if peter was here right now",
-					"john: i'd kick his ass once for being here",
-					"john: twice for insinuating that i'm too sensitive",
-					"john: heh... the boys would get a kick out of that"
-				}
-			},
-			dave = {
-				x = 24,
-				y = 6,
-				sprite = 67,
-				script = {
-					"dave: *sigh*.. the coffin will never be good enough",
-					"dave: ... not for peter, not for anyone",
-					"dave: i suck at this. i'm a one-armed freak"
-				}
-			},
-			richard = {
-				x = 20,
-				y = 14,
-				sprite = 64,
-				script = {
-					"richard: peter.... the apostle? no.... peter...",
-					"richard: he has been in my thoughts a lot lately",
-					"richard: i can still feel his presence in my church sometimes"
-				}
-			},
-			tim = {
-				x = 15,
-				y = 23,
-				sprite = 68,
-				script = {
-					"tim: you never know what you've lost until it's gone",
-					"tim: ...",
-					"tim: what a cliche this is"
-				}
-			},
+   sharon = {
+    x = 12.5,
+    y = 15,
+    sprite = 82,
+    script = {
+     "sharon: poor peter",
+     "sharon: he was always so cheerful",
+     "sharon: *sobs*"
+    }
+   },
+   john = {
+    x = 9,
+    y = 15,
+    sprite = 66,
+    script = {
+     "john: so uhm.. i went to peter's house.. but he wasn't home..",
+     "john: but i found this note on the table..",
+     "john: \"goodbye cruel world\"",
+     "john: way to be a downer, peter.. i was just gonna punch you a little.."
+    }
+   },
+   dave = {
+    x = 10.5,
+    y = 16,
+    sprite = 67,
+    script = {
+     "dave: what.. so now i have to make two coffins..?",
+     "dave: ..or maybe it wasn't for fluffy in the first place..",
+     "dave: would be kinda unusual to burry animals in a coffin",
+    }
+   },
+   richard = {
+    x = 9,
+    y = 13,
+    sprite = 64,
+    script = {
+     "richard: i'm so sorry i didn't tell you this earlier..",
+     "richard: i guess now we know why he died.",
+     "richard: i never knew he was in such a hurry to die."
+    }
+   },
+   tim = {
+    x = 12,
+    y = 13,
+    sprite = 68,
+    script = {
+     "tim: fuck.. i thought it was just a dream..",
+     "tim: i guess it's always the good ones who go first..",
+     "tim: how much did i take..?"
+    }
+   },
 
-			paul = {
-				x =11,
-				y = 12,
-				sprite = 65,
-				script = {
-					"paul: sharon is going to find out about the rabbit, she is going to find out",
-					"paul: oh no! i just know it! she'll see that the grave was disturbed..."
-				}
-			},
-
-			animal = {
-				x = 8,
-				y = 16,
-				sprite = 96,
-				firstsprite = 96,
-				maxsprite = 100,
-				repititionnumber = 4,
-				talkedto = true,
-				script = {
-					"chicken: cluck!"
- 			}
-			},
-
-			animal = {
-				x = 8,
-				y = 8,
-				sprite = 100,
-				firstsprite = 100,
-				maxsprite = 104,
-				repititionnumber = 4,
-				talkedto = true,
-				script = {
-					"dog: woof!"
- 			}
-			}
+   paul = {
+    x =11,
+    y = 12,
+    sprite = 65,
+    script = {
+     "paul: i knew it.. i knew something bad had happened..",
+     "paul: something bad always happens when i'm around.."
+    }
+   },
 		}
 	},
 }
 
 function _init()
+ currentlevel = 8
  music(0)
 end
 
