@@ -238,8 +238,7 @@ levels = {
 				sprite = 67,
 				script = {
 					"dave: they say death is the road to glory",
-					"dave: ... but there is no glory in a dead rabbit",
-					"dave: i could solve this for sharon if i could only talk to her..."
+					"dave: ... but there is no glory in a dead rabbit"
 				}
 			},
 			richard = {
