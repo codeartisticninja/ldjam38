@@ -69,7 +69,7 @@ levels = {
 				sprite = 68,
 				script = {
 					"tim: they say that after you die you're rooted to a place'",
-					"tim: like a floating leaf caught in a spiders web"
+					"tim: like a leaf caught in a spiderweb"
 				}
 			},
 			animal = {
@@ -119,7 +119,7 @@ levels = {
 					"richard: i can always say i was just here to spread the word of god",
 					"richard: sharon has such nice feet, i want to worship them",
 					"richard: ...",
-					"richard: i swear by the bible, this is the last time i do this!"
+					"richard: i swear... on the bible... this is the last time i do this!"
 				}
 			},
 			tim = {
@@ -128,8 +128,8 @@ levels = {
 				sprite = 68,
 				script = {
 					"tim: maybe if i eat it here",
-					"tim: maybe noone will see me",
-					"tim: why was i out again?"
+					"tim: noone will see me if i freak out again",
+					"tim: is someone watching me?"
 				}
 			},
 			animal = {
@@ -189,7 +189,7 @@ levels = {
 					"richard: ... in the name of the lord.... of course",
 					"richard: forgive my sins",
 					"richard: ...",
-					"richard: i think this will be a good spot for peter, by the stone"
+					"richard: i think this will be a good spot for peter"
 				}
 			},
 			animal = {
@@ -493,10 +493,137 @@ levels = {
    },
 		}
 	},
+
+	{
+		chars = {
+			john = {
+				x = 11/8,
+				y = 53/8,
+				sprite = 66,
+				script = {
+					"john: i can't focus",
+					"john: fucking peter keeps getting back on my mind... why? he was such a freak",
+					"john: he would always put on that pretense, telling me he \"worried about me\"",
+					"john: as if i was one of those nutcases bottling up their feelings or some shit",
+					"john: peter... if you hear me right now... you were such an idiot"
+				}
+			},
+			dave = {
+				x = 111/8,
+				y = 53/8,
+				sprite = 67,
+				script = {
+					"dave: i can't measure while hammering, i can't hold the fucking saw and the....",
+					"dave: *sigh*.... do i set impossible standards for myself?",
+					"dave: what would peter say if he was here?",
+					"dave: ...",
+					"dave: \"you're too hard on yourself, dave!\", thats what he'd say... heh"
+				}
+			},
+			richard = {
+				x = 16,
+				y = 14.5,
+				sprite = 64,
+				script = {
+					"richard: when the coroner arrives... when peter arrives",
+					"richard: can i look in his face again?",
+					"richard: can i see him as god would, and not as his friend? his...",
+					"richard: honestly, he was more strong than i. suicide...",
+					"richard: maybe.... maybe i can honor him by striving even harder to be a better person"
+				}
+			},
+			tim = {
+				x = 28,
+				y = 4,
+				sprite = 68,
+				script = {
+					"tim: when i was a child i stood above a pond",
+					"tim: i looked into it, and saw my own reflection",
+					"tim: but then i lost my watch, and it plupped into it, destroying me with the ripples",
+					"tim: who am i now? has time taken me away?",
+					"tim: how can i stay grounded now? without peter?"
+				}
+			},
+			
+			paul = {
+				x =7,
+				y = 20,
+				sprite = 65,
+				script = {
+					"paul: peter used to say that all i was in control of, was my own actions",
+					"paul: ... he told me to beleive in myself",
+					"paul: what is belief? and who am i? a sicko who cuts off the limbs of dead pets",
+					"paul: dear beloved pets... and for what?"
+				}
+			},
+			
+			sharon = {
+				x = 18,
+				y = 6,
+				sprite = 82,
+				script = {
+					"sharon: i can't believe any of this is happening",
+					"sharon: i will never get over this",
+					"sharon: my make-up is running, but i don't even care at this point",
+					"sharon: .... that's a lie, i do care - and i hate myself for it!"
+				}
+			},
+
+			animal = {
+				x = 116/8,
+				y = 30/8,
+				sprite = 100,
+				firstsprite = 100,
+				maxsprite = 104,
+				repititionnumber = 4,
+				talkedto = true,
+				script = {
+					"dog: what are you talking to me for?"
+ 				}	
+			},
+
+			animal = {
+				x = 8,
+				y = 16,
+				sprite = 96,
+				firstsprite = 96,
+				maxsprite = 100,
+				repititionnumber = 4,
+				talkedto = true,
+				script = {
+				"chicken: cuck!"
+				}
+			},
+
+			
+		}
+	},
+
+	{
+		help = "morning, a year later",
+		chars = {
+			richard = {
+				x = 23.5,
+				y = 12.5,
+				sprite = 64,
+				script = {
+					"richard: *is tending to peter's grave*",
+					"richard: this is the day you died",
+					"richard: *waters the last plant, the grave is well-kept*",
+					"richard: if you're listening, i still have those thoughts peter",
+					"richard: *smiles*",
+					"richard: ... but you'll be happy to know that i haven't acted on them",
+					"richard: *contemplates for a moment*",
+					"richard: i guess you did help me after all, huh?",
+				}
+			},
+		}
+	},
+	
 }
 
 function _init()
- currentlevel = 8
+ currentlevel = 10
  music(0)
 end
 
