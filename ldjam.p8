@@ -69,7 +69,7 @@ levels = {
 				sprite = 68,
 				script = {
 					"tim: they say that after you die you're rooted to a place'",
-					"tim: like a floating leaf caught in a spiders web"
+					"tim: like a leaf caught in a spiderweb"
 				}
 			},
 			animal = {
@@ -119,7 +119,7 @@ levels = {
 					"richard: i can always say i was just here to spread the word of god",
 					"richard: sharon has such nice feet, i want to worship them",
 					"richard: ...",
-					"richard: i swear by the bible, this is the last time i do this!"
+					"richard: i swear... on the bible... this is the last time i do this!"
 				}
 			},
 			tim = {
@@ -128,8 +128,8 @@ levels = {
 				sprite = 68,
 				script = {
 					"tim: maybe if i eat it here",
-					"tim: maybe noone will see me",
-					"tim: why was i out again?"
+					"tim: noone will see me if i freak out again",
+					"tim: is someone watching me?"
 				}
 			},
 			animal = {
@@ -189,7 +189,7 @@ levels = {
 					"richard: ... in the name of the lord.... of course",
 					"richard: forgive my sins",
 					"richard: ...",
-					"richard: i think this will be a good spot for peter, by the stone"
+					"richard: i think this will be a good spot for peter"
 				}
 			},
 			animal = {
@@ -496,7 +496,7 @@ levels = {
 }
 
 function _init()
- currentlevel = 8
+ currentlevel = 1
  music(0)
 end
 
