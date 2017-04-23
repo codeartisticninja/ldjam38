@@ -270,7 +270,7 @@ levels = {
 				y = 12,
 				sprite = 65,
 				script = {
-					"paul: i didn't do it, so it wasn't my fault...",
+					"paul: it wasn't my fault, it wasn't my fault, it wasn't my fault",
 					"paul: .. was it?"
 				}
 			},
@@ -310,6 +310,122 @@ levels = {
 				script = {
 					"fluffy the rabbit is dead, but the cause of death is uncertain"
  				}
+			}
+		}
+	},
+	{
+		help = "the following night",
+		chars = {
+			deadanimal = {
+				x = 20,
+				y = 20,
+				sprite = 92,
+				talkedto = false,
+				dead = true,
+				script = {
+					"the rabbit has recently been dug up, and is missing a foot"
+ 				}
+			},
+			paul = {
+				x =20.5,
+				y = 20,
+				sprite = 65,
+				script = {
+					"paul: *looks at a bloody rabbits foot in his hand*",
+					"paul: .. this better be worth it!",
+					"paul: *pushes the rabbit back into its grave*"
+				}
+			},
+		}
+	},
+	{
+		chars = {
+			sharon = {
+				x = 4.5,
+				y = 12,
+				sprite = 82,
+				script = {
+					"sharon: i miss fluffy so much...  miss peter was here",
+					"sharon: he's the only one who can cheer me up, and motivate me",
+					"sharon: i'm ugly and i can't draw"
+				}
+			},
+			john = {
+				x = 18,
+				y = 1,
+				sprite = 66,
+				script = {
+					"john: if peter was here right now",
+					"john: i'd kick his ass once for being here",
+					"john: twice for insinuating that i'm too sensitive",
+					"john: heh... the boys would get a kick out of that"
+				}
+			},
+			dave = {
+				x = 24,
+				y = 6,
+				sprite = 67,
+				script = {
+					"dave: *sigh*.. the coffin will never be good enough",
+					"dave: ... not for peter, not for anyone",
+					"dave: i suck at this. i'm a one-armed freak"
+				}
+			},
+			richard = {
+				x = 20,
+				y = 14,
+				sprite = 64,
+				script = {
+					"richard: peter.... the apostle? no.... peter...",
+					"richard: he has been in my thoughts a lot lately",
+					"richard: i can still feel his presence in my church sometimes"
+				}
+			},
+			tim = {
+				x = 15,
+				y = 23,
+				sprite = 68,
+				script = {
+					"tim: you never know what you've lost until it's gone",
+					"tim: ...",
+					"tim: what a cliche this is"
+				}
+			},
+
+			paul = {
+				x =11,
+				y = 12,
+				sprite = 65,
+				script = {
+					"paul: sharon is going to find out about the rabbit, she is going to find out",
+					"paul: oh no! i just know it! she'll see that the grave was disturbed..."
+				}
+			},
+
+			animal = {
+				x = 8,
+				y = 16,
+				sprite = 96,
+				firstsprite = 96,
+				maxsprite = 100,
+				repititionnumber = 4,
+				talkedto = true,
+				script = {
+					"chicken: cluck!"
+ 			}
+			},
+
+			animal = {
+				x = 8,
+				y = 8,
+				sprite = 100,
+				firstsprite = 100,
+				maxsprite = 104,
+				repititionnumber = 4,
+				talkedto = true,
+				script = {
+					"dog: woof!"
+ 			}
 			}
 		}
 	},
