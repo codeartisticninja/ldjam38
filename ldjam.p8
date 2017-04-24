@@ -872,10 +872,10 @@ function handlemoveplayeraccrossmap()
 	end
 	if moved and allnpcstalkedto() then
 		currentlevel += 1
-		if currentlevel > 10 then
+		if currentlevel >= count(levels) then
 			music(-1)
 			player.state = 6
-		   currentlevel = 11
+			currentlevel = count(levels)
 		end
 	end
 end
@@ -896,21 +896,20 @@ function handledialog()
 	if dialog.col < 4096 then
 		dialog.col += 2
 	end
-	if btnp(4) then
-		player.state = 0
+	if btn(4) then
+		dialog.pos = count(dialog.script)
 		dialog.col = 0
 	end
-	if (btnp(5)) then
+	if btnp(5) then
 		if (dialog.pos < count(dialog.script)) then
 			dialog.pos += 1
 			dialog.col = 0
-		else if currentlevel > 10 then
+		elseif currentlevel == count(levels) then
 			player.state = 6
 		else
 			player.state = 0
 		end
-			dialog.col = 0
-		end
+		dialog.col = 0
 	end
 end
 
