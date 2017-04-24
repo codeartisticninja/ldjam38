@@ -16,7 +16,7 @@ player = {
 	y = 64,
 	dx = 0,
 	dy = 0,
-	state = 0,
+	state = -1,
 	sprite = 76,
 	flipped = false,
 	hover = 0,
@@ -37,9 +37,8 @@ levels = {
 		help = "use arrows to move",
 		chars = {}
 	},
-
 	{
-		help = "press z to listen",
+		help = "press x to listen",
 		chars = {
 			richard = {
 				x = 14.5,
@@ -68,7 +67,7 @@ levels = {
 				y = 6,
 				sprite = 68,
 				script = {
-					"tim: they say that after you die you're rooted to a place'",
+					"tim: they say that after you die you're rooted to a place",
 					"tim: like a leaf caught in a spiderweb"
 				}
 			},
@@ -86,7 +85,6 @@ levels = {
 			}
 		}
 	},
-
 	{
 		chars = {
 			john = {
@@ -181,7 +179,7 @@ levels = {
 				}
 			},
 			richard = {
-				x = 25,
+				x = 23.5,
 				y = 12,
 				sprite = 64,
 				script = {
@@ -337,163 +335,162 @@ levels = {
 			},
 		}
 	},
- {
-  chars = {
-   sharon = {
-    x = 4.5,
-    y = 12,
-    sprite = 82,
-    script = {
-     "sharon: i miss fluffy so much...  i wish peter was here",
-     "sharon: he's the only one who can cheer me up, and motivate me",
-     "sharon: i'm ugly"
-    }
-   },
-   john = {
-    x = 18,
-    y = 1,
-    sprite = 66,
-    script = {
-     "john: if peter was here right now",
-     "john: i'd kick his ass once for being here",
-     "john: twice for insinuating that i'm too sensitive",
-     "john: heh... the boys would get a kick out of that"
-    }
-   },
-   dave = {
-    x = 24,
-    y = 6,
-    sprite = 67,
-    script = {
-     "dave: *sigh*.. the coffin will never be good enough",
-     "dave: not even for fluffy..",
-     "dave: i suck at this. i'm a one-armed freak"
-    }
-   },
-   richard = {
-    x = 20,
-    y = 14,
-    sprite = 64,
-    script = {
-     "richard: peter.... the apostle? no.... peter...",
-     "richard: he has been in my thoughts a lot lately",
-     "richard: i can still feel his presence in my church sometimes"
-    }
-   },
-   tim = {
-    x = 15,
-    y = 23,
-    sprite = 68,
-    script = {
-     "tim: you never know what you've lost until it's gone",
-     "tim: ...",
-     "tim: what a cliche this is"
-    }
-   },
-
-   paul = {
-    x =11,
-    y = 12,
-    sprite = 65,
-    script = {
-     "paul: sharon is going to find out about the rabbit, she is going to find out",
-     "paul: oh no! i just know it! she'll see that the grave was disturbed..."
-    }
-   },
-
-   animal = {
-    x = 8,
-    y = 16,
-    sprite = 96,
-    firstsprite = 96,
-    maxsprite = 100,
-    repititionnumber = 4,
-    talkedto = true,
-    script = {
-     "chicken: cluck!"
-    }
-   },
-
-   animal = {
-    x = 8,
-    y = 8,
-    sprite = 100,
-    firstsprite = 100,
-    maxsprite = 104,
-    repititionnumber = 4,
-    talkedto = true,
-    script = {
-     "dog: woof!"
-    }
-   }
-  }
- },
 	{
 		chars = {
-   sharon = {
-    x = 12.5,
-    y = 15,
-    sprite = 82,
-    script = {
-     "sharon: poor peter",
-     "sharon: he was always so cheerful",
-     "sharon: *sobs*"
-    }
-   },
-   john = {
-    x = 9,
-    y = 15,
-    sprite = 66,
-    script = {
-     "john: so uhm.. i went to peter's house.. but he wasn't home..",
-     "john: but i found this note on the table..",
-     "john: \"goodbye cruel world\"",
-     "john: way to be a downer, peter.. i was just gonna punch you a little.."
-    }
-   },
-   dave = {
-    x = 10.5,
-    y = 16,
-    sprite = 67,
-    script = {
-     "dave: what.. so now i have to make two coffins..?",
-     "dave: ..or maybe it wasn't for fluffy in the first place..",
-     "dave: would be kinda unusual to burry animals in a coffin",
-    }
-   },
-   richard = {
-    x = 9,
-    y = 13,
-    sprite = 64,
-    script = {
-     "richard: i'm so sorry i didn't tell you this earlier..",
-     "richard: i guess now we know why he died.",
-     "richard: i never knew he was in such a hurry to die."
-    }
-   },
-   tim = {
-    x = 12,
-    y = 13,
-    sprite = 68,
-    script = {
-     "tim: fuck.. i thought it was just a dream..",
-     "tim: i guess it's always the good ones who go first..",
-     "tim: how much did i take..?"
-    }
-   },
+		sharon = {
+			x = 4.5,
+			y = 12,
+			sprite = 82,
+			script = {
+			"sharon: i miss fluffy so much...  i wish peter was here",
+			"sharon: he's the only one who can cheer me up, and motivate me",
+			"sharon: i'm ugly"
+			}
+		},
+		john = {
+			x = 18,
+			y = 1,
+			sprite = 66,
+			script = {
+			"john: if peter was here right now",
+			"john: i'd kick his ass once for being here",
+			"john: twice for insinuating that i'm too sensitive",
+			"john: heh... the boys would get a kick out of that"
+			}
+		},
+		dave = {
+			x = 24,
+			y = 6,
+			sprite = 67,
+			script = {
+			"dave: *sigh*.. the coffin will never be good enough",
+			"dave: not even for fluffy..",
+			"dave: i suck at this. i'm a one-armed freak"
+			}
+		},
+		richard = {
+			x = 20,
+			y = 14,
+			sprite = 64,
+			script = {
+			"richard: peter.... the apostle? no.... peter...",
+			"richard: he has been in my thoughts a lot lately",
+			"richard: i can still feel his presence in my church sometimes"
+			}
+		},
+		tim = {
+			x = 15,
+			y = 23,
+			sprite = 68,
+			script = {
+			"tim: you never know what you've lost until it's gone",
+			"tim: ...",
+			"tim: what a cliche this is"
+			}
+		},
 
-   paul = {
-    x =11,
-    y = 12,
-    sprite = 65,
-    script = {
-     "paul: i knew it.. i knew something bad had happened..",
-     "paul: something bad always happens when i'm around.."
-    }
-   },
+		paul = {
+			x =11,
+			y = 12,
+			sprite = 65,
+			script = {
+			"paul: sharon is going to find out about the rabbit, she is going to find out",
+			"paul: oh no! i just know it! she'll see that the grave was disturbed..."
+			}
+		},
+
+		animal = {
+			x = 8,
+			y = 16,
+			sprite = 96,
+			firstsprite = 96,
+			maxsprite = 100,
+			repititionnumber = 4,
+			talkedto = true,
+			script = {
+			"chicken: cluck!"
+			}
+		},
+
+		animal = {
+			x = 8,
+			y = 8,
+			sprite = 100,
+			firstsprite = 100,
+			maxsprite = 104,
+			repititionnumber = 4,
+			talkedto = true,
+			script = {
+				"dog: woof!"
+				}
+			}
 		}
 	},
+	{
+		chars = {
+			sharon = {
+				x = 12.5,
+				y = 15,
+				sprite = 82,
+				script = {
+				"sharon: poor peter",
+				"sharon: he was always so cheerful",
+				"sharon: *sobs*"
+				}
+			},
+			john = {
+				x = 9,
+				y = 15,
+				sprite = 66,
+				script = {
+				"john: so uhm.. i went to peter's house.. but he wasn't home..",
+				"john: but i found this note on the table..",
+				"john: \"goodbye cruel world\"",
+				"john: way to be a downer, peter.. i was just gonna punch you a little.."
+				}
+			},
+			dave = {
+				x = 10.5,
+				y = 16,
+				sprite = 67,
+				script = {
+				"dave: what.. so now i have to make two coffins..?",
+				"dave: ..or maybe it wasn't for fluffy in the first place..",
+				"dave: would be kinda unusual to burry animals in a coffin",
+				}
+			},
+			richard = {
+				x = 9,
+				y = 13,
+				sprite = 64,
+				script = {
+				"richard: i'm so sorry i didn't tell you this earlier..",
+				"richard: i guess now we know why he died.",
+				"richard: i never knew he was in such a hurry to die."
+				}
+			},
+			tim = {
+				x = 12,
+				y = 13,
+				sprite = 68,
+				script = {
+				"tim: fuck.. i thought it was just a dream..",
+				"tim: i guess it's always the good ones who go first..",
+				"tim: how much did i take..?"
+				}
+			},
 
+			paul = {
+				x =11,
+				y = 12,
+				sprite = 65,
+				script = {
+				"paul: i knew it.. i knew something bad had happened..",
+				"paul: something bad always happens when i'm around.."
+				}
+			},
+		}
+	},
 	{
 		chars = {
 			john = {
@@ -598,79 +595,78 @@ levels = {
 			
 		}
 	},
-
 	{
 		help = "after peters funeral",
 		chars = {
-   grave = {
-     x = 24.5,
-     y = 11.5,
-     sprite = 119,
-     talkedto = true,
-     dead = true,
-     script = {
-      "\"here lies peter\""
-    }
-   },
-   john = {
-    x = 11/8,
-    y = 53/8,
-    sprite = 66,
-    script = {
-     "john: man.. that guy, peter.. i guess he wasn't such an oddball after all..",
-     "john: i mean, if it wasn't for him, i never would have told sharon how i feel about her..",
-     "john: and now we're getting married! who would have thought she was a sucker for emotional guys..",
-     "john: heh.. thanks, peter.. you idiot.."
-    }
-   },
-   dave = {
-    x = 111/8,
-    y = 53/8,
-    sprite = 67,
-    script = {
-     "dave: i've gotten more work done in the last couple of days, than i have in forever!",
-     "dave: ..not always great work, but.. the customers seems happy.. ",
-     "dave: and, boy, do i feel better about myself",
-     "dave: peter.. wherever you are.. i owe you one.."
-    }
-   },
-   tim = {
-    x = 28,
-    y = 4,
-    sprite = 68,
-    script = {
-     "tim: dear peter.. am i still crazy for talking to a dead guy..?",
-     "tim: i swear i haven't touched the stuff for several days now!",
-     "tim: the others may not admit it, but.. i think you are the best martyr the village has ever had..",
-     "tim: ...",
-     "tim: hope you don't mind if i cut off your foot.."
-    }
-   },
-   
-   paul = {
-    x =7,
-    y = 20,
-    sprite = 65,
-    script = {
-     "paul: i am in control of my own life.. me and no one else..!",
-     "paul: not the stars or a rabbit's foot or any of that nonsense..",
-     "paul: besides.. i gave fluffy's foot to sharon as something to remember him by..",
-     "paul: thanks for believing in me, peter.. when i couldn't do so myself.."
-    }
-   },
-   
-   sharon = {
-    x = 18,
-    y = 6,
-    sprite = 82,
-    script = {
-     "sharon: i am beautiful.. i know that now..",
-     "sharon: not just because johnny tells me every day.. but because peter taught me how to love myself..",
-     "sharon: i never thought my johnny could be such a sweetheart.. once you get to know him..",
-     "sharon: ...",
-     "sharon: peter was such a sweet guy.. i'm surprised he was still single when he died.."
-    }
-   },
+			grave = {
+				x = 24.5,
+				y = 11.5,
+				sprite = 119,
+				talkedto = true,
+				dead = true,
+				script = {
+				"\"here lies peter\""
+				}
+			},
+			john = {
+				x = 11/8,
+				y = 53/8,
+				sprite = 66,
+				script = {
+				"john: man.. that guy, peter.. i guess he wasn't such an oddball after all..",
+				"john: i mean, if it wasn't for him, i never would have told sharon how i feel about her..",
+				"john: and now we're getting married! who would have thought she was a sucker for emotional guys..",
+				"john: heh.. thanks, peter.. you idiot.."
+				}
+			},
+			dave = {
+				x = 111/8,
+				y = 53/8,
+				sprite = 67,
+				script = {
+				"dave: i've gotten more work done in the last couple of days, than i have in forever!",
+				"dave: ..not always great work, but.. the customers seems happy.. ",
+				"dave: and, boy, do i feel better about myself",
+				"dave: peter.. wherever you are.. i owe you one.."
+				}
+			},
+			tim = {
+				x = 28,
+				y = 4,
+				sprite = 68,
+				script = {
+				"tim: dear peter.. am i still crazy for talking to a dead guy..?",
+				"tim: i swear i haven't touched the stuff for several days now!",
+				"tim: the others may not admit it, but.. i think you are the best martyr the village has ever had..",
+				"tim: ...",
+				"tim: hope you don't mind if i cut off your foot.."
+				}
+			},
+			
+			paul = {
+				x =7,
+				y = 20,
+				sprite = 65,
+				script = {
+				"paul: i am in control of my own life.. me and no one else..!",
+				"paul: not the stars or a rabbit's foot or any of that nonsense..",
+				"paul: besides.. i gave fluffy's foot to sharon as something to remember him by..",
+				"paul: thanks for believing in me, peter.. when i couldn't do so myself.."
+				}
+			},
+			
+			sharon = {
+				x = 18,
+				y = 6,
+				sprite = 82,
+				script = {
+				"sharon: i am beautiful.. i know that now..",
+				"sharon: not just because johnny tells me every day.. but because peter taught me how to love myself..",
+				"sharon: i never thought my johnny could be such a sweetheart.. once you get to know him..",
+				"sharon: ...",
+				"sharon: peter was such a sweet guy.. i'm surprised he was still single when he died.."
+				}
+			},
 			richard = {
 				x = 23.5,
 				y = 12.5,
@@ -686,31 +682,34 @@ levels = {
 			},
 		}
 	},
- {
-  help = "hold z to let go",
-  chars = {
-   grave = {
-     x = 24.5,
-     y = 11.5,
-     sprite = 119,
-     talkedto = true,
-     dead = true,
-     script = {
-      "\"here lies peter\""
-    }
-   },
-  }
- }
-	
+	{
+		help = "hold x to let go",
+		chars = {
+			grave = {
+				x = 24.5,
+				y = 11.5,
+				sprite = 119,
+				talkedto = true,
+				dead = true,
+				script = {
+					"\"here lies peter\""
+				}
+			},
+		}
+	}
 }
 
 function _init()
- currentlevel = 1
- music(0)
+	currentlevel = 1
+	music(0)
 end
 
 function _update()
-	if (player.state == 0) then
+	if player.state == -1 then
+		if btnp(5) then
+			player.state += 1
+		end
+	elseif (player.state == 0) then
 		for name,char in pairs(levels[currentlevel].chars) do
 			if (drawnumber % 30 == 1) then
 				if (rnd(5) < 2) then
@@ -737,7 +736,9 @@ end
 
 function _draw()
 	drawnumber += 1
-	if player.state == 7 then
+	if player.state == -1 then
+		drawstart()
+	elseif player.state == 7 then
 		drawcredits()
 	else
 		handleanimal()
@@ -821,7 +822,7 @@ function handlecontrols()
 	if (btn(3)) then
 		player.dy = 1
 	end
-	if (btnp(4) and npcwithinrange()) then
+	if (btnp(5) and npcwithinrange()) then
 		sfx(3)
 		dialog.pos = 1
 		player.state = 1
@@ -829,12 +830,12 @@ function handlecontrols()
 end
 
 function drawmap()
- for y=-8,8,8 do
-  for x=-8,8,8 do
-   camera(map.sizex*x + cam.x, map.sizey*y + cam.y)
-   mapdraw(0, 0, 0, 0, map.sizex,map.sizey)
-  end
- end
+	for y=-8,8,8 do
+		for x=-8,8,8 do
+			camera(map.sizex*x + cam.x, map.sizey*y + cam.y)
+			mapdraw(0, 0, 0, 0, map.sizex,map.sizey)
+		end
+	end
 	for y=-8,8,8 do
 		for x=-8,8,8 do
 			camera(map.sizex*x + cam.x, map.sizey*y + cam.y)
@@ -867,9 +868,9 @@ function handlemoveplayeraccrossmap()
 	if moved and allnpcstalkedto() then
 		currentlevel += 1
 		if currentlevel > 10 then
-   music(-1)
+			music(-1)
 			player.state = 6
-   currentlevel = 11
+		   currentlevel = 11
 		end
 	end
 end
@@ -890,16 +891,19 @@ function handledialog()
 	if dialog.col < 4096 then
 		dialog.col += 2
 	end
-	if (btnp(4)) then
+	if btnp(4) then
+		player.state = 0
+		dialog.col = 0
+	end
+	if (btnp(5)) then
 		if (dialog.pos < count(dialog.script)) then
 			dialog.pos += 1
 			dialog.col = 0
+		else if currentlevel > 10 then
+			player.state = 6
 		else
-   if currentlevel > 10 then
-    player.state = 6
-   else
- 			player.state = 0
-   end
+			player.state = 0
+		end
 			dialog.col = 0
 		end
 	end
@@ -913,7 +917,7 @@ function npcwithinrange()
 			dialog.script = char.script
 			char.talkedto = true
 		end
-	end 
+	end
 	return inrange
 end
 
@@ -939,15 +943,15 @@ function wordwrap(txt, w)
 end
 
 function firstword(txt)
- word = ""
- for i = 1,#txt do
-  c = sub(txt, i, i)
-  if (c == " ") then
-   return word
-  end
-  word = word..c
- end
- return word
+	word = ""
+	for i = 1,#txt do
+		c = sub(txt, i, i)
+		if (c == " ") then
+			return word
+		end
+		word = word..c
+	end
+	return word
 end
 
 function centertxt(txt, w)
@@ -965,17 +969,17 @@ function drawdiabox()
 	txt = dialog.script[dialog.pos]
 	txt = wordwrap(txt, 32)
 	txt = sub(txt,1,dialog.col)
- print(txt, 0, 98, 7)
+	print(txt, 0, 98, 7)
 	print(firstword(txt), 0, 98, 6)
 end
 
 -- ascend to the heavens! --
 
 function handleascend()
- handleplayermovement()
- if (btn(4)) then
-  player.hover -= .5
- end
+	handleplayermovement()
+	if (btn(5)) then
+		player.hover -= .5
+	end
 	if (drawnumber % 60 == 0) or (drawnumber % 30 == 7) then
 		player.shake += 1
 	elseif (drawnumber % 60 == 30) or (drawnumber % 30 == 22) then
@@ -984,6 +988,22 @@ function handleascend()
 	if player.hover < -80 then
 		player.state += 1
 	end
+end
+
+-- start screen --
+
+function drawstart()
+	color(7)
+	camera(0,0)
+	cls()
+	print("")
+	print("")
+	print("")
+	print("")
+	print(centertxt("restless in a small world",32))
+	print("")
+	print("")
+	print(centertxt("press x to start",32))
 end
 
 -- credits --
