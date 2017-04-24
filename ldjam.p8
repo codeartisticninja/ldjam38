@@ -3,7 +3,7 @@ version 8
 __lua__
 map = {
 	sizex = 32,
-	sizey = 32,
+	sizey = 32
 }
 
 cam = {
@@ -706,6 +706,11 @@ end
 
 function _update()
 	if player.state == -1 then
+		if (drawnumber % 30 == 1) or (drawnumber % 30 == 7) then
+			player.hover += 1
+		elseif (drawnumber % 30 == 15) or (drawnumber % 30 == 22) then
+			player.hover -= 1
+		end
 		if btnp(5) then
 			player.state += 1
 		end
@@ -993,33 +998,47 @@ end
 -- start screen --
 
 function drawstart()
-	color(7)
-	camera(0,0)
 	cls()
+	spr(player.sprite,player.x + player.shake-4,player.y + player.hover-4,1,1,player.flipped)
+	
+	camera(0,0)
 	print("")
 	print("")
 	print("")
 	print("")
+	print("")
+	print("")
+	color(12)
 	print(centertxt("restless in a small world",32))
 	print("")
 	print("")
+	print("")
+	print("")
+	print("")
+	print("")
+	print("")
+	print("")
+	color(5)
 	print(centertxt("press x to start",32))
 end
 
 -- credits --
 
 function drawcredits()
-	color(7)
-	camera(0,0)
 	cls()
+	camera(0,0)
 	print("")
 	print("")
 	print("")
 	print("")
-	print(centertxt("the end!",32))
+	color(12)
+	print(centertxt("rest in peace",32))
 	print("")
 	print("")
-	print(centertxt("made by",32))
+	color(6)
+	print(centertxt("ldjam game made by",32))
+	print("")
+	color(5)
 	print(centertxt("codeartistic.ninja",32))
 	print(centertxt("and",32))
 	print(centertxt("fennesz",32))
