@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#222" />
+  <title>Restless in a small world</title>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@codeartistic" />
+  <meta name="twitter:title" content="Restless in a small world" />
+  <meta name="twitter:description" content="A pico-8 game about the afterlife, made for Ludum Dare 38." />
+  <meta name="twitter:creator" content="@codeartistic" />
+  <meta name="twitter:image" content="http://the.codeartistic.ninja/did/restless/images/cover.png" />
+  <meta property="og:url" content="http://the.codeartistic.ninja/did/restless/" />
+  <meta property="og:title" content="Restless in a small world" />
+  <meta property="og:description" content="A pico-8 game about the afterlife, made for Ludum Dare 38." />
+  <meta property="og:type" content="game" />
+  <meta property="og:image" content="http://the.codeartistic.ninja/did/restless/images/cover.png" />
+  <link rel="icon" type="image/png" href="images/icon.png" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="script/webJoypad.css" />
+</head>
+
+<body>
+  <!--[if IE]><div class="noscript">Sadly this game doesn't run on Internet Explorer.</div><![endif]-->
+  <noscript>You need to enable JavaScript in order to play this game.</noscript>
+
+  <div class="page">
+    <div id="canvasContainer">
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+    </div>
+
+    <script type="text/javascript">
+      var canvas = document.getElementById("canvas");
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      // show Emscripten environment where the canvas is
+      // arguments are passed to PICO-8
+
+      var Module = {};
+      Module.canvas = canvas;
+
+  /*
+    // When pico8_buttons is defined, PICO-8 takes each int to be a live bitfield
+    // representing the state of each player's buttons
+    
+    var pico8_buttons = [0, 0, 0, 0, 0, 0, 0, 0]; // max 8 players
+    pico8_buttons[0] = 2 | 16; // example: player 0, RIGHT and Z held down
+    
+    // when pico8_gpio is defined, reading and writing to gpio pins will
+    // read and write to these values
+    var pico8_gpio = new Array(128);
+  */
+    </script>
+
+    <script async type="text/javascript" src="restless.js"></script>
+    
+    <br>
+
+    <div class=pico8_el onclick="Module.pico8Reset();">
+
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAaklEQVR4Ae2dOwoAMQhE15A+rfc/3bZ7AlMnQfywCkKsfcgMM9ZP+QHtIn0vLeBAFduiFdQ/0DmvtR5LXJ6CPSXe2ZXcFNlTxFbemKrbZPs35XogeS9xeQr+anT6LzoOwEDwZJ7jwhXUnwkTTiDQ2Ja34AAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII="
+        alt="Reset" width=12 height=1 2/> Reset
+
+    </div>
+
+    <div class=pico8_el onclick="Module.pico8TogglePaused();">
+
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAPUlEQVR4Ae3doQ0AIAxEUWABLPtPh2WCq26DwFSU/JPNT166QSu/Hg86W9dwLte+diP7AwAAAAAAgD+A+jM2ZAgo84I0PgAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII="
+        alt="Pause" width=12 height=12/> Pause
+
+    </div>
+    <div class=pico8_el onclick="document.getElementById('canvasContainer').requestFullscreen();">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAaklEQVR4Ae2dsQ1AIQhExfze1v2ns3UCrfgFhmgUUAoGgHscp21wX9BqaZoDojbB96OkDJKNcTN2BHTyYNYmoT2BlPL7BKgcPfHjAVXKKadkHOn9K1r16N0czN6a95N8mnA7Aq2fTZ3Af3UKmCSMazL8HwAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII="
+        alt="Fullscreen" width=12 height=12/> Fullscreen
+
+    </div>
+    <div class=pico8_el onclick="Module.pico8ToggleSound();">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAXklEQVR4Ae2doQ4AIQxD4YLH8v9fh+ULhjpxxSwLg2uyapr1JRu1iV5Z+1BGl4+xNpX38SYo2uRvYiT5LwEmt+ocgXVLrhPEgBiw8Q5w7/kueSkK+D2tJO4E/I3GrwkqQCBabEj/4QAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII="
+        alt="Toggle Sound" width=12 height=12/> Sound
+
+    </div>
+    <div class=pico8_el>
+      <a target="_new" href="http://www.lexaloffle.com/bbs/?uid=15083&amp;mode=carts">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAlElEQVR4Ae2dMQ5FQBCGh6jcwAkkateg3DiAa+iQUGqVKi95FQfAJRQOoHeBUf8JyQqKjZ1uMzuz2e/LTE3KhyF7kSlgLOykas23f6D+A9Yp84aAOYU15pcJnfji0Il2ID8HzC4y38ZrnfIBGxeRoR3c3EWrACdsV5BOsx7OSRnrOXh4F5HzA6bevwUn8wlz7eCDsQM99B3ks0s/4QAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII="
+          alt="More Carts" width=12 height=12/> Carts
+
+      </a>
+    </div>
+    <aside>
+      <h1>Restless in a small world</h1>
+      <p>A pico-8 game about the afterlife, made for Ludum Dare 38.</p>
+      <h2>Credits</h2>
+      <p>Made by codeartistic.ninja and fennesz</p>
+    </aside>
+
+  </div>
+
+  <script type="text/javascript" src="script/webJoypad.js"></script>
+  <script type="text/javascript" src="script/picojoy.js"></script>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//the.codeartistic.ninja/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+</body>
+
+</html>

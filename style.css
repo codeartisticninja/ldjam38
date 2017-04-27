@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+html {
+  background-color: #000;
+  color: #ccc;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.page {
+  margin: 1em auto;
+  text-align: center;
+  max-width: 512px;
+}
+
+aside {
+  clear: both;
+  text-align: left;
+  padding: .4em;
+}
+
+h1, h2 {
+  color: #29adff;
+}
+
+#canvasContainer {
+  background-color: #000;
+  width: 100%;
+}
+
+canvas#canvas {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100vmin;
+}
+
+.pico8_el {
+  float: left;
+  width:17%;
+  display:inline-block; 
+  margin: 1px;
+  padding: 8px 4px;
+  text-align: center;
+  color:#fff;
+  background-color:#777;
+  font-family : verdana;
+  font-size: 9pt;
+  cursor: pointer;
+  cursor: hand;
+}
+.pico8_el a{
+  text-decoration: none;
+  color:#fff;
+}
+
+.pico8_el:hover{
+  background-color:#aaa;
+}
+
+.pico8_el:link{
+  background-color:#aaa;
+}
+
+canvas{
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+    border: 0px
+}
+
