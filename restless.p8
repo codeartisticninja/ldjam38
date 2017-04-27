@@ -95,7 +95,7 @@ levels = {
 				y = 53/8,
 				sprite = 66,
 				script = {
-					"john: ...and then i totally punched him in the face.",
+					"john: ...and then i totally punched him in the face!",
 					"john: yeah!",
 					"john: dude thought he could tell me what's what... hah!",
 					"john: can't wait to tell the guys about that idiot."
