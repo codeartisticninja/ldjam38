@@ -22,6 +22,10 @@ h1, h2 {
   color: #29adff;
 }
 
+a {
+  color: inherit;
+}
+
 #canvasContainer {
   background-color: #000;
   width: 100%;
