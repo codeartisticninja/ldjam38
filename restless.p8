@@ -41,18 +41,18 @@ levels = {
 		chars = {}
 	},
 	{
-		help = "press x to listen",
+		help = "press x to listen in",
 		chars = {
 			richard = {
 				x = 14.5,
 				y = 13.5,
 				sprite = 64,
 				script = {
-					"richard: when should i tell the others that he's gone?'",
-					"richard: his body is still being examined, maybe i should just wait until his cause of death is known",
+					"richard: when should i tell the others that he's gone?",
+					"richard: his body is still being examined, maybe i should just wait until his cause of death is known.",
 					"richard: no matter what, it was too early for peter.",
 					"richard: ...",
-					"richard: at least now, i can be sure he won't tell anyone"
+					"richard: at least now, i can be sure he won't tell anyone."
 				}
 			},
 			paul = {
@@ -60,9 +60,9 @@ levels = {
 				y = 20,
 				sprite = 65,
 				script = {
-					"paul: there is such an odd breeze out tonight",
-					"paul: i should have stayed home",
-					"paul: i get the feeling that something bad has happened"
+					"paul: there is such an odd breeze out tonight.",
+					"paul: i should have stayed home.",
+					"paul: i get the feeling that something bad has happened."
 				}
 			},
 			tim = {
@@ -70,8 +70,8 @@ levels = {
 				y = 6,
 				sprite = 68,
 				script = {
-					"tim: they say that after you die you're rooted to a place",
-					"tim: like a leaf caught in a spiderweb"
+					"tim: they say that after you die you're rooted to a place.",
+					"tim: like a leaf caught in a spiderweb."
 				}
 			},
 			animal = {
@@ -95,10 +95,10 @@ levels = {
 				y = 53/8,
 				sprite = 66,
 				script = {
-					"john: and then i totally punched him in the face",
+					"john: ...and then i totally punched him in the face.",
 					"john: yeah!",
-					"john: dude thought he could tell me what's what... hah'",
-					"john: can't wait to tell the guys about that idiot"
+					"john: dude thought he could tell me what's what... hah!",
+					"john: can't wait to tell the guys about that idiot."
 				}
 			},
 			dave = {
@@ -106,8 +106,8 @@ levels = {
 				y = 53/8,
 				sprite = 67,
 				script = {
-					"dave: preacher richard said he had a woodworking job for me",
-					"dave: no matter what, i'll deliver",
+					"dave: preacher richard said he had a woodworking job for me.",
+					"dave: no matter what, i'll deliver.",
 					"dave: maybe a new pew for the church? hmm. it has to match the others..."
 				}
 			},
@@ -116,9 +116,9 @@ levels = {
 				y = 19.5,
 				sprite = 64,
 				script = {
-					"richard: maybe she isn't home?'",
-					"richard: i can always say i was just here to spread the word of god",
-					"richard: sharon has such nice feet, i want to worship them",
+					"richard: maybe she isn't home?",
+					"richard: i can always say i was just here to spread the word of god.",
+					"richard: sharon has such nice feet, i want to worship them.",
 					"richard: ...",
 					"richard: i swear... on the bible... this is the last time i do this!"
 				}
@@ -128,8 +128,8 @@ levels = {
 				y = 4,
 				sprite = 68,
 				script = {
-					"tim: maybe if i eat it here",
-					"tim: noone will see me if i freak out again",
+					"tim: maybe if i eat it here.",
+					"tim: no one will see me if i freak out again.",
 					"tim: is someone watching me?"
 				}
 			},
@@ -155,9 +155,9 @@ levels = {
 				y = 6,
 				sprite = 82,
 				script = {
-					"sharon: richard is so disgusting... ugh",
-					"sharon: he's so nice to me though",
-					"sharon: where is fluffy? he's such a cute rabbit"
+					"sharon: richard is so disgusting... ugh!",
+					"sharon: he's so nice to me though.",
+					"sharon: where is fluffy? he's such a cute rabbit."
 				}
 			},
 			john = {
@@ -165,10 +165,10 @@ levels = {
 				y = 6,
 				sprite = 66,
 				script = {
-					"john: sharon is so pretty",
-					"john: if i was some other kind of guy, i would romance her",
+					"john: sharon is so pretty.",
+					"john: if i was some other kind of guy, i would romance her.",
 					"john: ...",
-					"john: not that i give a shit about her and her stupid rabbit"
+					"john: not that i give a shit about her and her stupid rabbit."
 				}
 			},
 			dave = {
@@ -176,8 +176,8 @@ levels = {
 				y = 17,
 				sprite = 67,
 				script = {
-					"dave: maybe preacher richard is finally going to tell me about that woodworking project",
-					"dave: i can't do a proper job with all that secrecy",
+					"dave: maybe preacher richard is finally going to tell me about that woodworking project.",
+					"dave: i can't do a proper job with all that secrecy.",
 					"dave: i need to get my tools ready, dammit! what's so important?"
 				}
 			},
@@ -186,11 +186,11 @@ levels = {
 				y = 12,
 				sprite = 64,
 				script = {
-					"richard: i can't say that i miss peter, but i have to be graceous",
-					"richard: ... in the name of the lord.... of course",
-					"richard: forgive my sins",
+					"richard: i can't say that i miss peter, but i have to be graceous.",
+					"richard: ... in the name of the lord.... of course.",
+					"richard: forgive my sins.",
 					"richard: ...",
-					"richard: i think this will be a good spot for peter"
+					"richard: i think this will be a good spot for peter."
 				}
 			},
 			animal = {
@@ -228,9 +228,9 @@ levels = {
 				y = 15,
 				sprite = 66,
 				script = {
-					"john: the rabbit is dead",
-					"john: oh, bohooo - someone killed it",
-					"john: we're all gonna die anyway"
+					"john: the rabbit is dead.",
+					"john: oh, bohooo - someone killed it.",
+					"john: we're all gonna die anyway."
 				}
 			},
 			dave = {
@@ -238,8 +238,8 @@ levels = {
 				y = 15,
 				sprite = 67,
 				script = {
-					"dave: they say death is the road to glory",
-					"dave: ... but there is no glory in a dead rabbit"
+					"dave: they say death is the road to glory.",
+					"dave: ... but there is no glory in a dead rabbit."
 				}
 			},
 			richard = {
@@ -248,10 +248,10 @@ levels = {
 				sprite = 64,
 				script = {
 					"richard: the lord giveth, and the lord taketh away....",
-					"richard: ... i need to get rid of my sinful thoughts",
+					"richard: ... i need to get rid of my sinful thoughts.",
 					"richard: how can i look at sharon this way, even now?",
 					"richard: ...",
-					"richard: only the lord can judge the person who did this"
+					"richard: only the lord can judge the person who did this."
 				}
 			},
 			tim = {
@@ -259,9 +259,9 @@ levels = {
 				y = 12,
 				sprite = 68,
 				script = {
-					"tim: we're all prone to see intent behind cruel accidents",
-					"tim: i wish i could look away",
-					"tim: but all i see is my own paranoia"
+					"tim: we're all prone to see intent behind cruel accidents.",
+					"tim: i wish i could look away.",
+					"tim: but all i see is my own paranoia."
 				}
 			},
 
@@ -270,8 +270,8 @@ levels = {
 				y = 12,
 				sprite = 65,
 				script = {
-					"paul: it wasn't my fault, it wasn't my fault, it wasn't my fault",
-					"paul: .. was it?"
+					"paul: it wasn't my fault, it wasn't my fault, it wasn't my fault...",
+					"paul: ... was it?"
 				}
 			},
 
@@ -308,13 +308,13 @@ levels = {
 				talkedto = false,
 				dead = true,
 				script = {
-					"fluffy the rabbit is dead, but the cause of death is uncertain"
+					"fluffy the rabbit is dead, but the cause of death is uncertain."
  				}
 			}
 		}
 	},
 	{
-		help = "the following night",
+		help = "the following night...",
 		chars = {
 			deadanimal = {
 				x = 20,
@@ -323,7 +323,7 @@ levels = {
 				talkedto = false,
 				dead = true,
 				script = {
-					"the rabbit has recently been dug up, and is missing a foot"
+					"the rabbit has recently been dug up, and is missing a foot."
  				}
 			},
 			paul = {
@@ -331,9 +331,9 @@ levels = {
 				y = 20,
 				sprite = 65,
 				script = {
-					"paul: *looks at a bloody rabbits foot in his hand*",
-					"paul: .. this better be worth it!",
-					"paul: *pushes the rabbit back into its grave*"
+					"paul looks at a bloody rabbits foot in his hand.",
+					"paul: ... this better be worth it!",
+					"paul pushes the rabbit back into its grave."
 				}
 			},
 		}
@@ -345,9 +345,9 @@ levels = {
 			y = 12,
 			sprite = 82,
 			script = {
-			"sharon: i miss fluffy so much...  i wish peter was here",
-			"sharon: he's the only one who can cheer me up, and motivate me",
-			"sharon: i'm ugly"
+			"sharon: i miss fluffy so much...  i wish peter was here.",
+			"sharon: he's the only one who can cheer me up, and motivate me.",
+			"sharon: i'm so ugly..."
 			}
 		},
 		john = {
@@ -355,10 +355,10 @@ levels = {
 			y = 1,
 			sprite = 66,
 			script = {
-			"john: if peter was here right now",
-			"john: i'd kick his ass once for being here",
-			"john: twice for insinuating that i'm too sensitive",
-			"john: heh... the boys would get a kick out of that"
+			"john: if peter was here right now,",
+			"john: i'd kick his ass once for being here,",
+			"john: twice for insinuating that i'm too sensitive.",
+			"john: heh... the boys would get a kick out of that."
 			}
 		},
 		dave = {
@@ -366,9 +366,9 @@ levels = {
 			y = 6,
 			sprite = 67,
 			script = {
-			"dave: *sigh*.. the coffin will never be good enough",
-			"dave: not even for fluffy..",
-			"dave: i suck at this. i'm a one-armed freak"
+			"dave: *sigh*... the coffin will never be good enough.",
+			"dave: not even if it was for fluffy...",
+			"dave: i suck at this. i'm a one-armed freak."
 			}
 		},
 		richard = {
@@ -376,9 +376,9 @@ levels = {
 			y = 14,
 			sprite = 64,
 			script = {
-			"richard: peter.... the apostle? no.... peter...",
-			"richard: he has been in my thoughts a lot lately",
-			"richard: i can still feel his presence in my church sometimes"
+			"richard: peter... the apostle? no... peter...",
+			"richard: he has been in my thoughts a lot lately.",
+			"richard: i can still feel his presence in my church sometimes."
 			}
 		},
 		tim = {
@@ -386,9 +386,9 @@ levels = {
 			y = 23,
 			sprite = 68,
 			script = {
-			"tim: you never know what you've lost until it's gone",
+			"tim: you never know what you've lost until it's gone.",
 			"tim: ...",
-			"tim: what a cliche this is"
+			"tim: what a cliche this is."
 			}
 		},
 
@@ -397,7 +397,7 @@ levels = {
 			y = 12,
 			sprite = 65,
 			script = {
-			"paul: sharon is going to find out about the rabbit, she is going to find out",
+			"paul: sharon is going to find out about the rabbit, she is going to find out.",
 			"paul: oh no! i just know it! she'll see that the grave was disturbed..."
 			}
 		},
@@ -436,8 +436,8 @@ levels = {
 				y = 15,
 				sprite = 82,
 				script = {
-				"sharon: poor peter",
-				"sharon: he was always so cheerful",
+				"sharon: poor peter.",
+				"sharon: he was always seemed so happy.",
 				"sharon: *sobs*"
 				}
 			},
@@ -446,10 +446,10 @@ levels = {
 				y = 15,
 				sprite = 66,
 				script = {
-				"john: so uhm.. i went to peter's house.. but he wasn't home..",
-				"john: but i found this note on the table..",
+				"john: so uhm... i went to peter's house... but he wasn't home...",
+				"john: but i found this note on the table...",
 				"john: \"goodbye cruel world\"",
-				"john: way to be a downer, peter.. i was just gonna punch you a little.."
+				"john: way to be a downer, peter. i was just gonna punch you a little..."
 				}
 			},
 			dave = {
@@ -457,9 +457,9 @@ levels = {
 				y = 16,
 				sprite = 67,
 				script = {
-				"dave: what.. so now i have to make two coffins..?",
-				"dave: ..or maybe it wasn't for fluffy in the first place..",
-				"dave: would be kinda unusual to burry animals in a coffin",
+				"dave: what... so now i have to make another coffins...?",
+				"dave: oh... i guess it wasn't for fluffy in the first place...",
+				"dave: would be kinda unusual to bury pets in a coffin.",
 				}
 			},
 			richard = {
@@ -477,8 +477,9 @@ levels = {
 				y = 13,
 				sprite = 68,
 				script = {
-				"tim: fuck.. i thought it was just a dream..",
-				"tim: i guess it's always the good ones who go first..",
+				"tim: fuck... i thought it was just a dream...",
+				"tim: i guess it's always the good ones who go first...",
+				"tim: ...",
 				"tim: how much did i take..?"
 				}
 			},
@@ -488,8 +489,8 @@ levels = {
 				y = 12,
 				sprite = 65,
 				script = {
-				"paul: i knew it.. i knew something bad had happened..",
-				"paul: something bad always happens when i'm around.."
+				"paul: i knew it! i knew something bad had happened.",
+				"paul: something bad always happens when i'm around..."
 				}
 			},
 		}
@@ -501,11 +502,11 @@ levels = {
 				y = 53/8,
 				sprite = 66,
 				script = {
-					"john: i can't focus",
-					"john: fucking peter keeps getting back on my mind... why? he was such a freak",
-					"john: he would always put on that pretense, telling me he \"worried about me\"",
-					"john: as if i was one of those nutcases bottling up their feelings or some shit",
-					"john: peter... if you hear me right now... you were such an idiot"
+					"john: i can't focus.",
+					"john: fucking peter keeps getting back on my mind... why? he was such a freak.",
+					"john: he would always put on that pretense, telling me he \"worried about me\".",
+					"john: as if i was one of those nutcases bottling up their feelings or some shit.",
+					"john: peter... if you hear me right now... you were such an idiot."
 				}
 			},
 			dave = {
@@ -513,11 +514,11 @@ levels = {
 				y = 53/8,
 				sprite = 67,
 				script = {
-					"dave: i can't measure while hammering, i can't hold the fucking saw and the....",
-					"dave: *sigh*.... do i set impossible standards for myself?",
+					"dave: i can't measure while hammering, i can't hold the fucking saw and the...",
+					"dave: *sigh*... do i set impossible standards for myself?",
 					"dave: what would peter say if he was here?",
 					"dave: ...",
-					"dave: \"you're too hard on yourself, dave!\", thats what he'd say... heh"
+					"dave: \"you're too hard on yourself, dave!\", thats what he'd say... heh..."
 				}
 			},
 			richard = {
@@ -525,11 +526,11 @@ levels = {
 				y = 14.5,
 				sprite = 64,
 				script = {
-					"richard: when the coroner arrives... when peter arrives",
+					"richard: when the coroner arrives... when peter arrives...",
 					"richard: can i look in his face again?",
 					"richard: can i see him as god would, and not as his friend? his...",
 					"richard: honestly, he was more strong than i. suicide...",
-					"richard: maybe.... maybe i can honor him by striving even harder to be a better person"
+					"richard: maybe... maybe i can honor him by striving even harder to be a better person."
 				}
 			},
 			tim = {
@@ -537,9 +538,9 @@ levels = {
 				y = 4,
 				sprite = 68,
 				script = {
-					"tim: when i was a child i stood above a pond",
-					"tim: i looked into it, and saw my own reflection",
-					"tim: but then i lost my watch, and it plupped into it, destroying me with the ripples",
+					"tim: when i was a child i stood above a pond.",
+					"tim: i looked into it, and saw my own reflection.",
+					"tim: but then i lost my watch, and it plopped into it, destroying me with the ripples.",
 					"tim: who am i now? has time taken me away?",
 					"tim: how can i stay grounded now? without peter?"
 				}
@@ -550,9 +551,9 @@ levels = {
 				y = 20,
 				sprite = 65,
 				script = {
-					"paul: peter used to say that, all i was in control of, was my own actions",
-					"paul: ... he told me to beleive in myself",
-					"paul: what is belief? and who am i? a sicko who cuts off the limbs of dead pets",
+					"paul: peter used to say that, all i was in control of, was my own actions.",
+					"paul: ... he told me to believe in myself.",
+					"paul: what is belief? and who am i? a sicko who cuts off the limbs of dead pets.",
 					"paul: dear beloved pets... and for what?"
 				}
 			},
@@ -562,9 +563,9 @@ levels = {
 				y = 6,
 				sprite = 82,
 				script = {
-					"sharon: i can't believe any of this is happening",
-					"sharon: i will never get over this",
-					"sharon: my make-up is running, but i don't even care at this point",
+					"sharon: i can't believe any of this is happening.",
+					"sharon: i will never get over this.",
+					"sharon: my make-up is running, but i don't even care at this point.",
 					"sharon: .... that's a lie, i do care - and i hate myself for it!"
 				}
 			},
@@ -599,7 +600,7 @@ levels = {
 		}
 	},
 	{
-		help = "after peters funeral",
+		help = "after peters funeral...",
 		chars = {
 			grave = {
 				x = 24.5,
@@ -616,10 +617,10 @@ levels = {
 				y = 53/8,
 				sprite = 66,
 				script = {
-				"john: man.. that guy, peter.. i guess he wasn't such an oddball after all..",
-				"john: i mean, if it wasn't for him, i never would have told sharon how i feel about her..",
-				"john: and now we're getting married! who would have thought she was a sucker for emotional guys..",
-				"john: heh.. thanks, peter.. you idiot.."
+				"john: man... that guy, peter... i guess he wasn't such an oddball after all...",
+				"john: i mean, if it wasn't for him, i never would have told sharon how i feel about her...",
+				"john: and now we're getting married! who would have thought she was a sucker for emotional guys...",
+				"john: heh... thanks, peter... you idiot..."
 				}
 			},
 			dave = {
@@ -628,9 +629,10 @@ levels = {
 				sprite = 67,
 				script = {
 				"dave: i've gotten more work done in the last couple of days, than i have in forever!",
-				"dave: ..not always great work, but.. the customers seems happy.. ",
-				"dave: and, boy, do i feel better about myself",
-				"dave: peter.. wherever you are.. i owe you one.."
+				"dave: ... not always great work, but... the customers seems happy...",
+				"dave: and, boy, do i feel better about myself!",
+				"dave: ...",
+				"dave: peter... wherever you are... i owe you one..."
 				}
 			},
 			tim = {
@@ -638,11 +640,11 @@ levels = {
 				y = 4,
 				sprite = 68,
 				script = {
-				"tim: dear peter.. am i still crazy for talking to a dead guy..?",
+				"tim: dear peter... am i still crazy for talking to a dead guy..?",
 				"tim: i swear i haven't touched the stuff for several days now!",
-				"tim: the others may not admit it, but.. i think you are the best martyr the village has ever had..",
+				"tim: the others may not admit it, but... i think you are the best martyr the village has ever had.",
 				"tim: ...",
-				"tim: hope you don't mind if i cut off your foot.."
+				"tim: let's hope paul doesn't cut off your foot."
 				}
 			},
 			
@@ -651,10 +653,10 @@ levels = {
 				y = 20,
 				sprite = 65,
 				script = {
-				"paul: i am in control of my own life.. me and no one else..!",
-				"paul: not the stars or a rabbit's foot or any of that nonsense..",
-				"paul: besides.. i gave fluffy's foot to sharon as something to remember him by..",
-				"paul: thanks for believing in me, peter.. when i couldn't do so myself.."
+				"paul: i am in control of my own life... me and no one else..!",
+				"paul: not the stars or a rabbit's foot or any of that nonsense...",
+				"paul: besides... i gave fluffy's foot to sharon as something to remember him by...",
+				"paul: thanks for believing in me, peter... when i couldn't do so myself..."
 				}
 			},
 			
@@ -663,11 +665,11 @@ levels = {
 				y = 6,
 				sprite = 82,
 				script = {
-				"sharon: i am beautiful.. i know that now..",
-				"sharon: not just because johnny tells me every day.. but because peter taught me how to love myself..",
-				"sharon: i never thought my johnny could be such a sweetheart.. once you get to know him..",
+				"sharon: i am beautiful... i know that now...",
+				"sharon: not just because johnny tells me every day... but because peter taught me how to love myself...",
+				"sharon: i never thought my johnny could be such a sweetheart. once you get to know him.",
 				"sharon: ...",
-				"sharon: peter was such a sweet guy.. i'm surprised he was still single when he died.."
+				"sharon: peter was such a sweet guy... i'm surprised he was still single when he died..."
 				}
 			},
 			richard = {
@@ -675,11 +677,11 @@ levels = {
 				y = 12.5,
 				sprite = 64,
 				script = {
-					"richard is tending to peter's grave",
-					"richard: your funeral was great",
+					"richard is tending to peter's grave.",
+					"richard: your funeral was great.",
 					"richard: ...",
-					"richard: if you're listening, i still have those thoughts peter",
-					"richard: ... but you'll be happy to know that i haven't acted on them",
+					"richard: if you're listening, i still have those thoughts peter.",
+					"richard: ... but you'll be happy to know that i haven't acted on them.",
 					"richard: i guess you did help me after all, huh?",
 				}
 			},
@@ -923,6 +925,27 @@ function npcwithinrange()
 			inrange = true
 			dialog.script = char.script
 			char.talkedto = true
+			dialog.col1 = 6
+			dialog.col2 = 7
+			if char.sprite == 82 then
+				dialog.col1 = 14
+				dialog.col2 = 15
+			elseif char.sprite == 66 then
+				dialog.col1 = 2
+				dialog.col2 = 8
+			elseif char.sprite == 67 then
+				dialog.col1 = 9
+				dialog.col2 = 10
+			elseif char.sprite == 64 then
+				dialog.col1 = 5
+				dialog.col2 = 6
+			elseif char.sprite == 68 then
+				dialog.col1 = 1
+				dialog.col2 = 13
+			elseif char.sprite == 65 then
+				dialog.col1 = 3
+				dialog.col2 = 11
+			end
 		end
 	end
 	return inrange
@@ -953,10 +976,10 @@ function firstword(txt)
 	word = ""
 	for i = 1,#txt do
 		c = sub(txt, i, i)
-		if (c == " ") then
+		word = word..c
+		if (c == ":") then
 			return word
 		end
-		word = word..c
 	end
 	return word
 end
@@ -976,8 +999,8 @@ function drawdiabox()
 	txt = dialog.script[dialog.pos]
 	txt = wordwrap(txt, 32)
 	txt = sub(txt,1,dialog.col)
-	print(txt, 0, 98, 7)
-	print(firstword(txt), 0, 98, 6)
+	print(txt, 0, 98, dialog.col2)
+	print(firstword(txt), 0, 98, dialog.col1)
 end
 
 -- ascend to the heavens! --
